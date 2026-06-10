@@ -4,7 +4,7 @@ function App() {
   
   return (
     <>
-      Projeto de Pokemon
+      <h1>Projeto de React Pokemon API</h1>
     </>
   )
 }
