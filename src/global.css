@@ -1,0 +1,26 @@
+/* src/global.css */
+
+/* Reset do HTML */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*---↓ Paleta de Cores Globais ↓---*/
+:root {
+  --primary-color: #EF5350;
+  --secondary-color: #FFCC00; 
+  --background-color: #ffffff; 
+  --text-dark: #212121; 
+  --text-light: #FFFFFF; 
+  --card-bg: #FFFFFF; 
+}
+
+/*---↓ Padronização da font ↓---*/
+body, input, textarea, button {
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-dark);
+}
