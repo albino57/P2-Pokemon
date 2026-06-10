@@ -1,4 +1,8 @@
+import { useState, useEffect, useContext } from "react";
+import styles from "./Home.module.css";
+import styles from "src/global.css";
 
-export const Home = () => {
-  return <h1>Home Page - Pokemon List</h1>;
-};
+function Home() {
+    // Acima de return ficará os usos de useState, useEffect, useContext, etc.
+    return ();
+}
