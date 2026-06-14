@@ -1,0 +1,35 @@
+.layoutContainer{
+    display: flex;
+    flex-direction: column;
+    flex:1;
+    overflow : hidden;
+}
+.carousel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: darkorange;
+    width: 100%;
+    height: 20rem;
+}
+.mainContainer{
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    overflow: hidden;
+}
+.lateralBar{
+    width: 15%;
+    height: 100rem;
+    background-color: darkorange;
+    flex-shrink: 0;
+}
+.main{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    overflow-y: auto;
+}
+.divOutlet{
+    flex: 1;
+}
