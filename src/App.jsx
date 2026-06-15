@@ -1,9 +1,12 @@
+import { PokedexContext } from "./contexts/PokedexContext";
 import { Router } from "./routes/Router";
 
 function App() {
   return (
-    <Router />
+    <PokedexContext>
+      <Router />
+    </PokedexContext>
   );
 }
 
-export default App
+export default App;
