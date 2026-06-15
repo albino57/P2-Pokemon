@@ -1,49 +1,87 @@
-.layoutContainer{
+.layoutContainer {
     display: flex;
     flex-direction: column;
-    flex:1;
-    overflow : hidden;
+    flex: 1;
+    overflow: hidden;
 }
-.carousel{
+.carousel {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(255, 0, 0);
+    background-image: url(https://media.craiyon.com/2025-07-28/mmRFErnJQuWfmvZ2QknOmA.webp);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center;
+    background-image: blur(10px);
     width: 100%;
-    height: 15rem;
+    height: 20rem;
 }
-.navLogo{
-    width: 700px;
+.navLogo {
+    width: 500px;
 }
-.subNav{
+.subNav {
     background-color: rgb(36, 35, 35);
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
     width: 100%;
     height: 3rem;
-}.linkNavContainer{
+}
+.linkNavContainer {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 15rem;
-}.linkNav{
-      text-decoration: none;
-      color: white;
-      font-size: larger;
-      margin-top: 8px;
 }
-.mainContainer{
+.linkNav {
+    text-decoration: none;
+    color: white;
+    font-size: larger;
+    margin-top: 10px;
+}.searchBar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.searchinput {
+    width: 250px;
+    height: 30px;
+    border-radius: 30px;
+    margin-top: 8px;
+    border-style: none;
+    border: none;
+    padding-inline: 20px;
+}
+.pokeButtonImg{
+    width:30px;
+    margin-top: 3px;
+   
+}
+.pokeButton{
+     width: 40px;
+    border-radius: 20px;
+    margin-top: 1px;
+}
+.mainContainer {
     display: flex;
     flex: 1;
     flex-direction: row;
     overflow: hidden;
 }
 
-.main{
+.main {
     display: flex;
     flex: 1;
     flex-direction: column;
     overflow-y: auto;
 }
-.divOutlet{
-    flex: 1;
+
+.divOutlet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+   
+   
 }
