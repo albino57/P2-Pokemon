@@ -1,49 +1,88 @@
-.layoutContainer{
+.layoutContainer {
     display: flex;
     flex-direction: column;
-    flex:1;
-    overflow : hidden;
+    flex: 1;
+    overflow: hidden;
 }
-.carousel{
+.carousel {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(255, 0, 0);
+    background-image: url(https://i.makeagif.com/media/9-30-2024/PaySWa.gif);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center;
+    backdrop-filter: blur(10px);
     width: 100%;
-    height: 15rem;
+    height: 25rem;
 }
-.navLogo{
-    width: 700px;
+.navLogo {
+    width: 400px;
+    height: 150px;
+    margin-bottom: 70px;  
 }
-.subNav{
-    background-color: rgb(36, 35, 35);
+.subNav {
+    background-color: darkorange;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
     width: 100%;
     height: 3rem;
-}.linkNavContainer{
+}
+.linkNavContainer {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 15rem;
-}.linkNav{
-      text-decoration: none;
-      color: white;
-      font-size: larger;
-      margin-top: 8px;
+    gap: 10rem;
+    
 }
-.mainContainer{
+.linkNav {
+    text-decoration: none;
+    color: white;
+    font-size: larger;
+    margin-top: 10px;
+}.searchBar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    
+}
+.searchinput {
+    width: 250px;
+    height: 30px;
+    border-radius: 30px;
+    margin-top: 8px;
+    border-style: none;
+    border: none;
+    padding-inline: 20px;
+}
+.pokeButtonImg{
+    width:30px;
+    margin-top: 3px;
+   
+}
+.pokeButton{
+     width: 40px;
+    border-radius: 20px;
+    margin-top: 1px;
+}
+.mainContainer {
     display: flex;
     flex: 1;
     flex-direction: row;
     overflow: hidden;
 }
 
-.main{
+.main {
     display: flex;
     flex: 1;
     flex-direction: column;
     overflow-y: auto;
 }
-.divOutlet{
-    flex: 1;
+
+.divOutlet {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
 }
