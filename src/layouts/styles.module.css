@@ -1,0 +1,49 @@
+.layoutContainer{
+    display: flex;
+    flex-direction: column;
+    flex:1;
+    overflow : hidden;
+}
+.carousel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 0, 0);
+    width: 100%;
+    height: 15rem;
+}
+.navLogo{
+    width: 700px;
+}
+.subNav{
+    background-color: rgb(36, 35, 35);
+    width: 100%;
+    height: 3rem;
+}.linkNavContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15rem;
+}.linkNav{
+      text-decoration: none;
+      color: white;
+      font-size: larger;
+      margin-top: 8px;
+}
+.mainContainer{
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+.main{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    overflow-y: auto;
+}
+.divOutlet{
+    flex: 1;
+}

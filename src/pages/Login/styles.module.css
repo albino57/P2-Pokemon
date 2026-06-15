@@ -1,0 +1,32 @@
+.background{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(https://i.pinimg.com/736x/c3/38/7f/c3387f31601b9a2f95b61bf63496f8ab.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center;
+}
+.pokedexLogo{
+    width: 400px;
+}
+
+.loginContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    width: 400px;
+    height: 400px;
+     background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    
+}
