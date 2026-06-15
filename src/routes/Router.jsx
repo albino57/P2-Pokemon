@@ -9,7 +9,7 @@ import { Login } from "../pages/Login";
 export const Router = () => {
   return (
     <Routes>
-      <Route path="/" element={<Login/>}></Route>
+      <Route path="/login" element={<Login/>}></Route>
       <Route element={<DefaultLayout />}>
         <Route path="/home" element={<Home />} />
         <Route path="/pokedex" element={<Pokedex />} />

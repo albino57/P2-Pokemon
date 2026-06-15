@@ -16,7 +16,7 @@ export const DefaultLayout = () => {
 
           <div className={style.searchBar}>
              <input className={style.searchinput} placeholder = "Buscar Pokémon" type="search"/>
-             <button className={style.pokeButton}>
+             <button  className={style.pokeButton}>
               <img className = {style.pokeButtonImg}src="src\assets\Pokebola-pokeball-png-0.png" alt="pokeButton" />
              </button>
           </div>

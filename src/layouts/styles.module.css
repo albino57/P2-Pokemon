@@ -8,20 +8,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(https://media.craiyon.com/2025-07-28/mmRFErnJQuWfmvZ2QknOmA.webp);
+    background-image: url(https://i.makeagif.com/media/9-30-2024/PaySWa.gif);
     background-repeat: no-repeat;
     background-size: cover; 
     background-position: center;
-    background-image: blur(10px);
+    backdrop-filter: blur(10px);
     width: 100%;
-    height: 20rem;
+    height: 25rem;
 }
 .navLogo {
     width: 500px;
+    height: 280px;
+    margin-bottom: 15px;  
 }
 .subNav {
-    background-color: rgb(36, 35, 35);
-    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    background-color: darkorange;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
     width: 100%;
     height: 3rem;
 }
@@ -30,7 +32,8 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 15rem;
+    gap: 10rem;
+    
 }
 .linkNav {
     text-decoration: none;
@@ -42,6 +45,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    
 }
 .searchinput {
     width: 250px;
