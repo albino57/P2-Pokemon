@@ -2,12 +2,12 @@ import { useState, useEffect, useContext } from "react";
 import { Outlet, Link } from "react-router-dom";
 import style from './styles.module.css';
 import { Searchbar } from "../components/Searchbar";
-import { searchPokemon } from "../services/PokeAPI/pokeAPI";
+import { searchPokemon } from "../services/PokeAPI/api";
 
 export const DefaultLayout = () => {
 
-  const onSearchHandle = (pokemon) => {
-    const results = searchPokemon(pokemon)
+  const onSearchHandle = async (pokemon) => {
+    const results = await searchPokemon(pokemon)
     console.log('pokemon', results)
   }
   return (
