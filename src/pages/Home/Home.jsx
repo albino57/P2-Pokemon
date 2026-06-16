@@ -9,8 +9,6 @@ export const Home = () => {
 
     const { pokedex, addPokemon, dropPokemon } = useContext(PokedexContext);
 
-    //
-
     return <>
         <div className={styles.container}> 
             <h2>Pokédex - Pokémon</h2>
