@@ -3,10 +3,11 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url(https://media.tenor.com/ZL2KeKdEozEAAAAM/pokemon-anime.gif);
+    background-image: url(https://media1.tenor.com/m/bpPyZC8s_k0AAAAd/iris-iris-pokemon.gif);
     background-repeat: no-repeat;
     background-size: cover; 
     background-position: center;
+    image-rendering: pixelated;
     image-rendering: crisp-edges;
 }
 .pokedexLogo{
@@ -21,7 +22,7 @@
     width: 500px;
     height: 550px;
      background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(10px);
 
     border: 1px solid rgba(255, 255, 255, 0.2);
