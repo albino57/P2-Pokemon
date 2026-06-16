@@ -1,0 +1,88 @@
+.layoutContainer {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: hidden;
+}
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://i.makeagif.com/media/9-30-2024/PaySWa.gif);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center;
+    backdrop-filter: blur(10px);
+    width: 100%;
+    height: 25rem;
+}
+.navLogo {
+    width: 400px;
+    height: 150px;
+    margin-bottom: 70px;  
+}
+.subNav {
+    background-color: darkorange;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+    width: 100%;
+    height: 3rem;
+}
+.linkNavContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    
+}
+.linkNav {
+    text-decoration: none;
+    color: white;
+    font-size: larger;
+    margin-top: 10px;
+}.searchBar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    
+}
+.searchinput {
+    width: 250px;
+    height: 30px;
+    border-radius: 30px;
+    margin-top: 8px;
+    border-style: none;
+    border: none;
+    padding-inline: 20px;
+}
+.pokeButtonImg{
+    width:30px;
+    margin-top: 3px;
+   
+}
+.pokeButton{
+     width: 40px;
+    border-radius: 20px;
+    margin-top: 1px;
+}
+.mainContainer {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+.main {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.divOutlet {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}

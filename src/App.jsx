@@ -1,12 +1,12 @@
-import { useState } from 'react'
+import { PokedexContext } from "./contexts/PokedexContext";
+import { Router } from "./routes/Router";
 
 function App() {
-  
   return (
-    <>
-      <h1>Projeto de React Pokemon API</h1>
-    </>
-  )
+    <PokedexContext>
+      <Router />
+    </PokedexContext>
+  );
 }
 
-export default App
+export default App;
