@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import { getEnemyList } from '../../services/DndAPI'
 
-
 export const PokemonList = () => {
     const [pokemonList, setPokemonList] = useState([]);
     const [loading, setLoading] = useState(true);
