@@ -20,6 +20,11 @@ export const PokemonCreator = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    if (name.trim() === "" || type.trim() === "") {
+        alert("Preencha o nome e o tipo do Pokémon!");
+        return;
+    }
+
     const newPokemon = {
       name,
       type,
@@ -35,7 +40,7 @@ export const PokemonCreator = () => {
     } catch (err) {
       console.error(err);
     }
-  };
+};
 
     const handleDelete = async (id) => {
     try {

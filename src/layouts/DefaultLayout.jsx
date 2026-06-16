@@ -13,7 +13,7 @@ export const DefaultLayout = () => {
           <a className={style.linkNav} href="">Home</a>
           <a className={style.linkNav} href="">Pokémons</a>
           <a className={style.linkNav} href="">Pokédex</a>
-          <a className={style.linkNav} href="">Criar Pokémons</a>
+          <a className={style.linkNav} href="">New Pokémons</a>
 
           <div className={style.searchBar}>
              <input className={style.searchinput} placeholder = "Buscar Pokémon" type="search"/>
