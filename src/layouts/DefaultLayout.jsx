@@ -2,8 +2,14 @@ import { useState, useEffect, useContext } from "react";
 import { Outlet, Link } from "react-router-dom";
 import style from './styles.module.css';
 import { Searchbar } from "../components/Searchbar";
+import { searchPokemon } from "../services/PokeAPI/pokeAPI";
 
 export const DefaultLayout = () => {
+
+  const onSearchHandle = (pokemon) => {
+    const results = searchPokemon(pokemon)
+    console.log('pokemon', results)
+  }
   return (
     <div className={style.layoutContainer}>
       <nav className={style.carousel}>
@@ -15,7 +21,8 @@ export const DefaultLayout = () => {
           <Link className={style.linkNav}  to="/pokemon">Pokémons</Link>
           <Link className={style.linkNav}  to="/pokedex">Pokédex</Link>
 
-           <Searchbar/>
+           <Searchbar 
+               onSearch={onSearchHandle}/>
         </div>
       </nav>
 
