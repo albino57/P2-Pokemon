@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 //src/routes/Router.jsx
 
 import { Routes, Route, Navigate } from "react-router-dom";
@@ -21,4 +19,3 @@ export const Router = () => {
     </Routes>
   );
 };
->>>>>>> Stashed changes

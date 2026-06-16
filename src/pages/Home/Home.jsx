@@ -3,11 +3,6 @@ import { PokedexContext } from "../../contexts/PokedexContext";
 import styles from "./Home.module.css";
 import styles from "src/global.css";
 
-<<<<<<< Updated upstream
-function Home() {
-    // Acima de return ficará os usos de useState, useEffect, useContext, etc.
-    return ();
-=======
 export const Home = () => {
 
     const [filtro, setFiltro] = useState("");
@@ -34,5 +29,4 @@ export const Home = () => {
             /> 
         </div>
     </>
->>>>>>> Stashed changes
 }

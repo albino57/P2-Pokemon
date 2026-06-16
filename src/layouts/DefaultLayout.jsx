@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 import { useState, useEffect, useContext } from "react";
 import { Outlet } from "react-router-dom";
 import style from './styles.module.css';
@@ -41,4 +39,3 @@ export const DefaultLayout = () => {
     </div>
   );
 };
->>>>>>> Stashed changes
