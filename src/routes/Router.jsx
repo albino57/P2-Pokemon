@@ -5,6 +5,7 @@ import { DefaultLayout } from "../layouts/DefaultLayout";
 import { Home } from "../pages/Home/Home";
 import { Pokedex } from "../pages/Pokedex/Pokedex";
 import { Login } from "../pages/Login";
+import { Pokemons } from "../pages/Pokemons";
 
 export const Router = () => {
   return (
@@ -12,7 +13,8 @@ export const Router = () => {
       <Route path="/login" element={<Login />} />
       <Route element={<DefaultLayout />}>
         <Route path="/" element={<Navigate to="/home" replace />} />
-        <Route path="/home" element={<Home />} />
+         <Route path="/home" element={<Home />} />
+         <Route path="/pokemon" element={<Pokemons />} />
         <Route path="/pokedex" element={<Pokedex />} />
       </Route>
       <Route path="*" element={<h2>Página Não Encontrada</h2>} />

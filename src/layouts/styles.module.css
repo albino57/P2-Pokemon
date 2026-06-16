@@ -40,32 +40,7 @@
     color: white;
     font-size: larger;
 }
-.searchBar{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    
-}
-.searchinput {
-    width: 250px;
-    height: 30px;
-    border-radius: 30px;
-    border-style: none;
-    border: none;
-    padding-inline: 20px;
-}
-.pokeButtonImg{
-    width:30px;
-    margin-top: 3px;
-   
-}
-.pokeButton{
-     width: 40px;
-    border-radius: 20px;
-    margin-top: 1px;
-    background-color: rgb(0, 26, 255);
-}
+
 .mainContainer {
     display: flex;
     flex: 1;
