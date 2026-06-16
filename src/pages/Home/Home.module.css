@@ -4,7 +4,7 @@
    justify-content: center;
    align-items: center;
    flex-direction: column;
-   gap: 2px;
+   gap: 4px;
 }
 
 .sobreContainer {
@@ -30,7 +30,7 @@
     width: 50%;
     margin-right: 50px;
     gap: 80px;
-   color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
 }
 .paragraph{
     font-size: 25px;
@@ -50,10 +50,9 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 30%;
+    width: 35%;
     height: 30rem;
     text-align: center;
-    margin-right: 63rem;
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(7px);
     -webkit-backdrop-filter: blur(10px);
@@ -62,11 +61,48 @@
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 .pokemonsTipos {
-    width: 450px;
+    width: 460px;
     height: 400px;
-    margin-right: 50px;
 }
 .txtBox2 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: left;
+    width: 80%;
+    gap: 15px;
+    color: rgb(0, 0, 0);
+}
+.paragraph2{
+    font-size: 25px;
+    text-align: justify;
+}
+.titlePokedex2{
+    font-size: 30px;
+}
+.sobreContainer3{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 60%;
+    height: 30rem;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 8px solid rgba(255, 255, 255, 0.034);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.divBlock{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-left: 100px;
+}
+
+.txtBox3 {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -75,10 +111,10 @@
     gap: 30px;
     color: rgb(0, 0, 0);
 }
-.paragraph2{
+.paragraph3{
     font-size: 25px;
     text-align: justify;
 }
-.titlePokedex2{
+.titlePokedex4{
     font-size: 30px;
 }
