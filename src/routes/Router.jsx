@@ -13,6 +13,8 @@ export const Router = () => {
       <Route element={<DefaultLayout />}>
         <Route path="/" element={<Navigate to="/home" replace />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/pokemons" element={<Pokemons />} />
+         <Route path="/pokemons/:name" element={<PokemonsDetails />} />
         <Route path="/pokedex" element={<Pokedex />} />
       </Route>
       <Route path="*" element={<h2>Página Não Encontrada</h2>} />

@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
-import { getEnemyList } from '../../services/DndAPI'
+import { getPokemonList } from '../../services/PokeAPI'
 
 
 export const PokemonList = () => {
@@ -18,7 +18,6 @@ export const PokemonList = () => {
             setLoading(false);
         });
     }
-    
     useEffect(() => {
         fillEnemyList();
     }, []);
@@ -29,7 +28,9 @@ export const PokemonList = () => {
 
     return (
            <div className= {style.pokemonList}>
-
+             <ul>
+                {pokemon.map(pokemon) => }
+             </ul>
            </div>
 
     )

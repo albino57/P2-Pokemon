@@ -13,7 +13,7 @@ export function getPokemonList() {
 }
 
 export function getPokemonDetails(id) {
-	const url = 'pokemon/' + id;
+	const url = 'pokemon/' + name;
 
 	return apiPoke.get(url);
 }
