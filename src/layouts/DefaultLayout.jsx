@@ -1,6 +1,7 @@
 import { useState, useEffect, useContext } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 import style from './styles.module.css';
+import { Searchbar } from "../components/Searchbar";
 
 export const DefaultLayout = () => {
   return (
@@ -14,12 +15,7 @@ export const DefaultLayout = () => {
           <Link className={style.linkNav}  to="/pokemon">Pokémons</Link>
           <Link className={style.linkNav}  to="/pokedex">Pokédex</Link>
 
-          <div className={style.searchBar}>
-             <input className={style.searchinput} placeholder = "Buscar Pokémon" type="search"/>
-             <button  className={style.pokeButton}>
-              <img className = {style.pokeButtonImg}src="src\assets\Pokebola-pokeball-png-0.png" alt="pokeButton" />
-             </button>
-          </div>
+           <Searchbar/>
         </div>
       </nav>
 

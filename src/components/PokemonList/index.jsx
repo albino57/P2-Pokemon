@@ -1,8 +1,8 @@
 
 import { useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
-import { getPokemonList, getPokemonDetails } from '../../services/PokeAPI'
-import { CardPokemons } from './CardPokemons'
+import { getPokemonList, getPokemonDetails } from '../../services/PokeAPI/pokeAPI'
+import { CardPokemons } from '../CardPokemons'
 import style from './styles.module.css'
 
 export const PokemonList = () => {
@@ -12,17 +12,17 @@ export const PokemonList = () => {
 
     function fillPokemonList() {
         getPokemonList().then(async (results) => {
-
+            
             const listPoke = results.data.results;
 
-            const pokeDatailsPromisses = listPoke.map((pokemon) => {
+            const pokeDetailsPromisses = listPoke.map((pokemon) => {
 
                 return getPokemonDetails(pokemon.name);
             });
 
-            const pokeDatailsResponse = await Promisse.all(pokeDatailsResponse)
+            const pokeDetailsResponse = await Promise.all(pokeDetailsPromisses)
 
-            const listCompletPokemons = pokeDatailsResponse.map((res) => res.data)
+            const listCompletPokemons = pokeDetailsResponse.map((res) => res.data)
             setPokemonList(listCompletPokemons);
 
         }).catch((e) => {
