@@ -3,23 +3,23 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url(https://i.pinimg.com/736x/c3/38/7f/c3387f31601b9a2f95b61bf63496f8ab.jpg);
+    background-image: url(https://media.tenor.com/ZL2KeKdEozEAAAAM/pokemon-anime.gif);
     background-repeat: no-repeat;
     background-size: cover; 
     background-position: center;
+    image-rendering: crisp-edges;
 }
 .pokedexLogo{
-    width: 400px;
+    width: 600px;
 }
-
 .loginContainer{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     
-    width: 400px;
-    height: 400px;
+    width: 500px;
+    height: 550px;
      background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
