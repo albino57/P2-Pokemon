@@ -1,7 +1,6 @@
 import { useState, useEffect, useContext } from "react";
 import { PokedexContext } from "../../contexts/PokedexContext";
 import styles from "./Home.module.css";
-import styles from "src/global.css";
 
 export const Home = () => {
 
