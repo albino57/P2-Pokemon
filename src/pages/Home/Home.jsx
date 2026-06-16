@@ -22,7 +22,7 @@ export const Home = () => {
             <div className={styles.divBlock}>
                 <div className={styles.sobreContainer2}>
                     <div className={styles.txtBox2}>
-                        <h1 className={styles.titlePokedex2}>Pókemons Types</h1>
+                        <h1 className={styles.titlePokedex2}>Types</h1>
                         <p className={styles.paragraph2}>Busque e capture seus Pókemons pelo tipo,
                             monte seu deck de cards Pokémons escolhendo pelo tipo e suas fraquezas</p>
                     </div>
@@ -30,7 +30,7 @@ export const Home = () => {
                 </div>
                 <div className={styles.sobreContainer3}>
                     <div className={styles.txtBox3}>
-                        <h1 className={styles.titlePokedex2}>Pokémon Evolutions</h1>
+                        <h1 className={styles.titlePokedex2}>Evolutions</h1>
                         <p className={styles.paragraph2}>Veja todas cada uma das evoluçoes dos seus pokémons e
                             dos outros Pokémons que deseja capturar, colecione cards, e viva na pele de um treinador pokémon </p>
                     </div>
