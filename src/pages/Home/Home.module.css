@@ -1,1 +1,39 @@
 /*Home.module.css*/
+.sobreContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 30rem;
+    text-align: center;
+    box-shadow: rgba(3, 7, 255, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 8px solid rgba(255, 255, 255, 0.034);
+    border-radius: 20px;
+     margin-left: 100px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.txtBox {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 50%;
+    margin-right: 50px;
+    gap: 80px;
+   color: rgb(0, 0, 0);
+}
+.paragraph{
+    font-size: 25px;
+    text-align: justify;
+}
+.titlePokedex{
+    font-size: 30px;
+}
+.pokemons {
+    width: 500px;
+    height: 450px;
+    margin-right: 50px;
+}
