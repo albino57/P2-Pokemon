@@ -35,7 +35,6 @@ export const DefaultLayout = () => {
       <footer>
             <p>Rodapé Temporario</p>
           </footer>
-          <Outlet />
     </div>
   );
 };
