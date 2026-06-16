@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext } from "react";
-import { Outlet } from "react-router";
+import { Outlet } from "react-router-dom";
 import style from './styles.module.css';
 
 export const DefaultLayout = () => {
@@ -35,6 +35,7 @@ export const DefaultLayout = () => {
       <footer>
             <p>Rodapé Temporario</p>
           </footer>
+          <Outlet />
     </div>
   );
 };
