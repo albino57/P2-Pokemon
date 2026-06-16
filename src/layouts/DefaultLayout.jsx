@@ -10,9 +10,9 @@ export const DefaultLayout = () => {
       </nav>
       <nav className={style.subNav}>
         <div className={style.linkNavContainer}>
-          <a className={style.linkNav} href="">Home</a>
-          <a className={style.linkNav} href="">Pokémons</a>
-          <a className={style.linkNav} href="">Pokédex</a>
+          <Link className={style.linkNav}  to="/home">Home</Link>
+          <Link className={style.linkNav}  to="/pokemon">Pokémons</Link>
+          <Link className={style.linkNav}  to="/pokedex">Pokédex</Link>
 
           <div className={style.searchBar}>
              <input className={style.searchinput} placeholder = "Buscar Pokémon" type="search"/>
