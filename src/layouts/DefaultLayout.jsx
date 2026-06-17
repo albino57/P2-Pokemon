@@ -1,8 +1,15 @@
 import { useState, useEffect, useContext } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 import style from './styles.module.css';
+import { Searchbar } from "../components/Searchbar";
+import { searchPokemon } from "../services/PokeAPI/api";
 
 export const DefaultLayout = () => {
+
+  const onSearchHandle = async (pokemon) => {
+    const results = await searchPokemon(pokemon)
+    console.log('pokemon', results)
+  }
   return (
     <div className={style.layoutContainer}>
       <nav className={style.carousel}>
@@ -13,13 +20,9 @@ export const DefaultLayout = () => {
           <a className={style.linkNav} href="">Home</a>
           <a className={style.linkNav} href="">Pokémons</a>
           <a className={style.linkNav} href="">Pokédex</a>
-
-          <div className={style.searchBar}>
-             <input className={style.searchinput} placeholder = "Buscar Pokémon" type="search"/>
-             <button  className={style.pokeButton}>
-              <img className = {style.pokeButtonImg}src="src\assets\Pokebola-pokeball-png-0.png" alt="pokeButton" />
-             </button>
-          </div>
+          <a className={style.linkNav} href="">New Pokémons</a>
+          <Searchbar 
+               onSearch={onSearchHandle}/>
         </div>
       </nav>
 
