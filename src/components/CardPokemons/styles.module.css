@@ -1,15 +1,295 @@
-.card {
-    background-color: #f5f5f5;
-    border-radius: 8px;
-    padding: 16px;
+.pokeCard {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    width: 300px;
+    margin: 2rem auto;
+    padding: 2rem;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    width: 100%;
-    max-width: 200px;
+    font-family: Arial, sans-serif;
+    border: 1px solid #f0f0f0;
+    text-transform: capitalize;
+    border-color: rgba(255, 217, 0, 0.76);
+    border-style: outset;
+    border-width: 7px;
+    
+}.pokeCard:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s;
+}
+
+.bodyCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 10px 10px 0px;
+    flex: 1;
+    width: 100px;
 }
 
 .pokeImage {
-    width: 120px;
-    height: 120px;
-    object-fit: contain;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.473);
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    filter: drop-shadow(0px 5px 5px rgba(0,0,0,0.1));
+}
+
+.topCard {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pokeName {
+    text-transform: capitalize;
+    font-size: 20px;
+}
+.idPoke{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-bottom: 30px;
+    font-size: 12px;
+}
+
+.bottomCard {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.typesCard {
+    display: flex;
+    gap: 10px;
+    padding: 6px 14px;
+    border-radius: 8px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 0.85rem;
+    margin-right: 8px;
+    margin-top: 5px;
+    width: max-content;
+}
+
+.typeText {
+    text-transform: capitalize;
+}
+
+.grass {
+    background-color: #088335;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 15px;
+    width: 60px;
+    height: 30px;
+}
+
+.fire {
+    background-color: #ff4800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+     border-radius: 15px;
+    width: 60px;
+    height: 30px;
+}
+
+.water {
+    background-color: #1e75dfcb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+     border-radius: 15px;
+    width: 60px;
+    height: 30px;
+}
+
+.bug {
+    background-color: #3f2b12;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+     border-radius: 15px;
+    width: 60px;
+    height: 30px;
+}
+
+.normal {
+    background-color: #525151;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   border-radius: 15px;
+    width: 60px;
+    height: 30px;
+}
+
+.poison {
+    background-color: #921414c0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+     border-radius: 15px;
+    width: 60px;
+    height: 30px;
+}
+
+.electric {
+    background-color: #facc15;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+     border-radius: 15px;
+    width: 60px;
+    height: 30px;
+}
+
+.ground {
+    background-color: #643b1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+     border-radius: 15px;
+    width: 60px;
+    height: 30px;
+}
+
+.fairy {
+    background-color: #f472b6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+     border-radius: 15px;
+    width: 60px;
+    height: 30px;
+}
+.flying{
+    background-color: #2d69c4a8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   border-radius: 15px;
+    width: 60px;
+    height: 30px;
+}
+.psychic{
+    background-color: #843597a8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   border-radius: 15px;
+    width: 60px;
+    height: 30px;
+
+}
+.fighting{
+   background-color: #ff1100e1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   border-radius: 15px;
+    width: 60px;
+    height: 30px;
+}
+
+.ghost{
+     background-color: #777676c0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   border-radius: 15px;
+    width: 60px;
+    height: 30px;
+}
+
+.ice{
+    background-color: #1ea8dfcb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+     border-radius: 15px;
+    width: 60px;
+    height: 30px;
+}
+.dragon{
+    background-color: #31a779a8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   border-radius: 15px;
+    width: 60px;
+    height: 30px;
+}
+.rock{
+    background-color: #888787e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   border-radius: 15px;
+    width: 60px;
+    height: 30px;
+}
+.dark{
+      background-color: #5605c0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   border-radius: 15px;
+    width: 60px;
+    height: 30px;
+}
+
+.steel{
+  background-color: #302e30dc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   border-radius: 15px;
+    width: 60px;
+    height: 30px;
+
+}
+
+.captureBttn{
+    background: #fbca1f;
+  font-family: inherit;
+  padding: 0.6em 1.3em;
+  font-weight: 900;
+  font-size: 18px;
+  border: 3px solid black;
+  border-radius: 0.4em;
+  box-shadow: 0.1em 0.1em;
+  cursor: pointer;
+}.captureBttn:hover{
+    transform: translate(-0.05em, -0.05em);
+  box-shadow: 0.15em 0.15em;
+}.captureBttn:active {
+  transform: translate(0.05em, 0.05em);
+  box-shadow: 0.05em 0.05em;
 }
