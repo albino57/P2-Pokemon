@@ -7,6 +7,7 @@ import { Pokedex } from "../pages/Pokedex/Pokedex";
 import { Login } from "../pages/Login";
 import { Pokemons } from "../pages/Pokemons";
 import { PokemonCreator} from "../pages/PokemonCreator/PokemonCreator"
+import Contato from "../pages/Contato/Contato";
 
 export const Router = () => {
   return (
@@ -18,6 +19,7 @@ export const Router = () => {
          <Route path="/pokemon" element={<Pokemons />} />
         <Route path="/pokedex" element={<Pokedex />} />
         <Route path="/pokemon-creator" element={<PokemonCreator />} />
+        <Route path="/contato" element={<Contato />} />
       </Route>
       <Route path="*" element={<h2>Página Não Encontrada</h2>} />
     </Routes>

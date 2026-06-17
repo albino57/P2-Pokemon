@@ -1,9 +1,6 @@
 import React from 'react'
 import './Contato.css'
-import MemberCard from "../../components/PokemonList/MemberCard";
-import fotoSilva from "../../assets/foto-silva.jpg";
-import fotoMario from "../../assets/foto-mario.jpeg";
-import fotoBnVitor from "../../assets/foto-bnvitor.png";
+import MemberCard from "../../components/MemberCards/MemberCard";
 
 function Contato (){
     const integrantes = [
