@@ -6,13 +6,7 @@ export const Pokemons = () => {
 
     return (
         
-           <div className={styles.container}>
-              <div className={styles.logoBlock}>
-                <img className = {styles.logo}src="src/assets/pokedex.png" alt="logo" />
-              </div>
                <PokemonList/>
-           </div>
-        
-         
+            
     )
 }

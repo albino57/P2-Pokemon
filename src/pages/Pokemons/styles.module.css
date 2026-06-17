@@ -1,12 +1,2 @@
 
-.logoBlock{
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-}
-.logo{
-    width: 350px;
-    padding: 10px;
-}
+
