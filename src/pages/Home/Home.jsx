@@ -5,6 +5,7 @@ import styles from "./Home.module.css";
 export const Home = () => {
 
  const [filtro, setFiltro] = useState("");
+ 
  const { pokedex, addPokemon, dropPokemon } = useContext(PokedexContext);
 
 
