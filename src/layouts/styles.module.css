@@ -14,12 +14,12 @@
     background-position: center;
     backdrop-filter: blur(10px);
     width: 100%;
-    height: 25rem;
+    height: 35rem;
 }
 .navLogo {
-    width: 400px;
-    height: 150px;
-    margin-bottom: 70px;  
+    width: 500px;
+    height: 250px;
+    margin-bottom: 90px;  
 }
 .subNav {
     background-color: darkorange;
@@ -39,33 +39,8 @@
     text-decoration: none;
     color: white;
     font-size: larger;
-    margin-top: 10px;
-}.searchBar{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    
 }
-.searchinput {
-    width: 250px;
-    height: 30px;
-    border-radius: 30px;
-    margin-top: 8px;
-    border-style: none;
-    border: none;
-    padding-inline: 20px;
-}
-.pokeButtonImg{
-    width:30px;
-    margin-top: 3px;
-   
-}
-.pokeButton{
-     width: 40px;
-    border-radius: 20px;
-    margin-top: 1px;
-}
+
 .mainContainer {
     display: flex;
     flex: 1;
@@ -82,7 +57,13 @@
 
 .divOutlet {
     display: flex;
-    justify-content: center;
-    height: 100vh;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex: 1;
     width: 100%;
+    padding: 2rem;
+    text-align: center;
+    background-image: url(src/assets/background.jfif);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
