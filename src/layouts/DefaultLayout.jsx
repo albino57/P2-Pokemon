@@ -36,8 +36,8 @@ export const DefaultLayout = () => {
         
       </div>
       <footer>
-            <p>Rodapé Temporario</p>
-            <Link to="/contato">
+            <p>Pokemon © 2026 - Projeto Serratec</p>
+            <Link to="/contato" className="footerLink">
               Contato
             </Link>
           </footer>
