@@ -135,3 +135,35 @@
     transform: translateY(2px);
     box-shadow: 0 1px 0px #8b0000;
 }
+
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  animation: slideIn 0.3s ease, fadeOut 0.3s ease 2.7s;
+  z-index: 9999;
+}
+
+.success {
+  background-color: #22c55e;
+}
+
+.error {
+  background-color: #ef4444;
+}
+
+.successCard {
+  background-color: #22c55e;
+  color: white;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-align: center;
+  animation: fadeIn 0.3s ease;
+}
