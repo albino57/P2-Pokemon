@@ -18,8 +18,6 @@ export const Home = () => {
                 value={filtro}
                 onChange={(e) => setFiltro(e.target.value)}
             /> 
-
-
             <div className={styles.sobreContainer}>
                 <img className={styles.pokemons} src="src\assets\pokemons.png" alt="" />
                 <div className={styles.txtBox}>
