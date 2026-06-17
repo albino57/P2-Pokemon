@@ -38,7 +38,7 @@ export const CardPokemons = ({ pokemon }) => {
                 </div>
             </div>
 
-            <button onClick={() => isCaptured ? dropPokemon(pokemon.id) : addPokemon(pokemon)}>
+            <button className={style.captureBttn} onClick={() => isCaptured ? dropPokemon(pokemon.id) : addPokemon(pokemon)}>
                 {isCaptured ? "Soltar" : "Capturar"}
             </button>
 

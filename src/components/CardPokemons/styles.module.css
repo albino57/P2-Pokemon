@@ -1,20 +1,24 @@
 .pokeCard {
-    background: white;
-    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
-    width: 268px;
+    width: 300px;
     margin: 2rem auto;
-   
     padding: 2rem;
     text-align: center;
     font-family: Arial, sans-serif;
     border: 1px solid #f0f0f0;
     text-transform: capitalize;
-}
-
-.pokeCard:hover {
-    transform: scale(1.3);
-    transition: transform 0.3s;
+    border-color: rgba(255, 217, 0, 0.76);
+    border-style: outset;
+    border-width: 7px;
+    
+}.pokeCard:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s;
 }
 
 .bodyCard {
@@ -23,12 +27,14 @@
     justify-content: center;
     padding: 10px 10px 10px 0px;
     flex: 1;
+    width: 100px;
 }
 
 .pokeImage {
     width: 200px;
     height: 200px;
     object-fit: contain;
+    background-color: rgba(255, 255, 255, 0.473);
     filter: drop-shadow(0px 5px 5px rgba(0,0,0,0.1));
 }
 
@@ -270,3 +276,20 @@
 
 }
 
+.captureBttn{
+    background: #fbca1f;
+  font-family: inherit;
+  padding: 0.6em 1.3em;
+  font-weight: 900;
+  font-size: 18px;
+  border: 3px solid black;
+  border-radius: 0.4em;
+  box-shadow: 0.1em 0.1em;
+  cursor: pointer;
+}.captureBttn:hover{
+    transform: translate(-0.05em, -0.05em);
+  box-shadow: 0.15em 0.15em;
+}.captureBttn:active {
+  transform: translate(0.05em, 0.05em);
+  box-shadow: 0.05em 0.05em;
+}
