@@ -24,27 +24,6 @@ export const Home = () => {
                 value={filtro}
                 onChange={(e) => setFiltro(e.target.value)}
             /> 
-            
-            <FlatList
-                    data={pokemonsFiltrados}
-                    keyExtractor={(item) => String(item.id)}
-                    numColumns={2}
-                    columnWrapperStyle={styles.row}
-                    contentContainerStyle={styles.lista}
-                    renderItem={({ item }) => (
-                      <PokemonCard
-                        pokemon={item}
-                        capturado={estaCapturado(item)}
-                        onCapturar={() => toggleCaptura(item)}
-                      />
-                    )}
-                    ListEmptyComponent={
-                      <Text style={styles.feedbackTexto}>
-                        Nenhum Pokémon encontrado para "{filtro}".
-                      </Text>
-                    }
-                  /> 
-
             <div className={styles.sobreContainer}>
                 <img className={styles.pokemons} src="src\assets\pokemons.png" alt="" />
                 <div className={styles.txtBox}>
