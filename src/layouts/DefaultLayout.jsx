@@ -17,10 +17,10 @@ export const DefaultLayout = () => {
       </nav>
       <nav className={style.subNav}>
         <div className={style.linkNavContainer}>
-          <a className={style.linkNav} href="">Home</a>
-          <a className={style.linkNav} href="">Pokémons</a>
-          <a className={style.linkNav} href="">Pokédex</a>
-          <a className={style.linkNav} href="">New Pokémons</a>
+          <a className={style.linkNav} href="/home">Home</a>
+          <a className={style.linkNav} href="/pokemon">Pokémons</a>
+          <a className={style.linkNav} href="pokedex">Pokédex</a>
+          <a className={style.linkNav} href="pokemon-creator">New Pokémons</a>
           <Searchbar 
                onSearch={onSearchHandle}/>
         </div>
