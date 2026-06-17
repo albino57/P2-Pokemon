@@ -19,7 +19,4 @@ export const CardPokemons = ({ pokemon }) => {
             </button>
         </div>
     )
-
-
-
 }

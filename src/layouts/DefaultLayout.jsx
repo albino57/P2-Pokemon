@@ -16,9 +16,9 @@ export const DefaultLayout = () => {
           <Link className={style.linkNav}  to="/home">Home</Link>
           <Link className={style.linkNav}  to="/pokemon">Pokémons</Link>
           <Link className={style.linkNav}  to="/pokedex">Pokédex</Link>
-          <a className={style.linkNav} href="">New Pokémons</a>
+          <Link className={style.linkNav} to = "/creator">New Pokémons</Link>
            <Searchbar 
-               onSearch={onSearchHandle}/>
+              />
         </div>
       </nav>
 
