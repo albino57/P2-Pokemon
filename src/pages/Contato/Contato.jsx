@@ -1,6 +1,11 @@
 import React from 'react'
 import './Contato.css'
 import MemberCard from "../../components/MemberCards/MemberCard";
+import fotoSilva from "../../assets/foto-silva.jpg"
+import fotoBnVitor from "../../assets/foto-bnvitor.png"
+import fotoMario from "../../assets/foto-mario.jpeg"
+import fotoMarcos from "../../assets/foto-marcos.jpeg"
+
 
 function Contato (){
     const integrantes = [
@@ -13,28 +18,28 @@ function Contato (){
 
     {
         nome: "Bruno da Silva",
-        foto: "fotoSilva",
+        foto: fotoSilva,
         linkedin: "https://www.linkedin.com/in/bruno-freitas-709ba23a4",
         github: "https://github.com/Brun0Fr3itas"
     },
 
     {
         nome: "Bruno Vitor",
-        foto: "fotoBnVitor",
+        foto: fotoBnVitor,
         linkedin: "www.linkedin.com/in/bruno-vitor-25b4ab393",
         github: "https://github.com/brunovitor-git05"
     },
 
     {
         nome: "Marcos Paulo",
-        foto: "/foto-marcos.png",
-        linkedin: "https://linkedin.com",
-        github: "https://github.com"
+        foto: fotoMarcos,
+        linkedin: "https://www.linkedin.com/in/marcos-paulo-mello-6b87ab375/",
+        github: "https://github.com/marcospmelloo"
     },
 
     {
         nome: "Mário",
-        foto: "fotoMario",
+        foto: fotoMario,
         linkedin: "https://www.linkedin.com/in/mjpraun/",
         github: "https://github.com/MJPraun"
     },
