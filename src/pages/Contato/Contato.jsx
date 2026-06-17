@@ -13,14 +13,14 @@ function Contato (){
 
     {
         nome: "Bruno da Silva",
-        foto: fotoSilva,
+        foto: "fotoSilva",
         linkedin: "https://www.linkedin.com/in/bruno-freitas-709ba23a4",
         github: "https://github.com/Brun0Fr3itas"
     },
 
     {
         nome: "Bruno Vitor",
-        foto: fotoBnVitor,
+        foto: "fotoBnVitor",
         linkedin: "www.linkedin.com/in/bruno-vitor-25b4ab393",
         github: "https://github.com/brunovitor-git05"
     },
@@ -34,7 +34,7 @@ function Contato (){
 
     {
         nome: "Mário",
-        foto: fotoMario,
+        foto: "fotoMario",
         linkedin: "https://www.linkedin.com/in/mjpraun/",
         github: "https://github.com/MJPraun"
     },
@@ -61,8 +61,8 @@ function Contato (){
                 {
                     integrantes.map((integrante)=>(
                     <MemberCard 
-                    key={integrante.nome}
-                    integrante={integrante}
+                        key={integrante.nome}
+                        integrante={integrante}
                     />
                     ))
                 }

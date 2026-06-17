@@ -37,6 +37,9 @@ export const DefaultLayout = () => {
       </div>
       <footer>
             <p>Rodapé Temporario</p>
+            <Link to="/contato">
+              Contato
+            </Link>
           </footer>
     </div>
   );
