@@ -1,14 +1,15 @@
 import { useContext, useState } from "react";
 import { PokedexContext } from "../../contexts/PokedexContext";
 import style from './styles.module.css'
+import { UNSAFE_useFogOFWarDiscovery } from "react-router";
 
 export const CardPokemons = ({ pokemon }) => {
-    const {pokedex, addPokemon, dropPokemon} = useContext(PokedexContext);
+    const { pokedex, addPokemon, dropPokemon } = useContext(PokedexContext);
 
-    const isCaptured = pokedex.some((item) => item.id === pokemon.id);;
+    const isCaptured = pokedex.some((item) => item.id === pokemon.id);
 
-   const imagemPokemon = pokemon.sprites?.other['official-artwork']?.front_default 
-                          || pokemon.sprites?.front_default;
+    const imagemPokemon = pokemon.sprites.other['official-artwork'].front_default
+
 
     const [status, setStatus] = useState('idle');
     
@@ -30,9 +31,31 @@ export const CardPokemons = ({ pokemon }) => {
     }
 
     return (
-        <div className={style.card}>
-            <img src={imagemPokemon} alt={pokemon.name} className={style.pokeImage} />
-            <h3>{pokemon.name}</h3>
+        <div className={style.pokeCard}>
+            <div className={style.idPoke}>#{pokemon.id}</div>
+            <div className={style.cardImg}>
+                <img src={imagemPokemon} alt={pokemon.name} className={style.pokeImage} />
+            </div>
+            <div className={style.bodyCard}>
+
+                <div className={style.topCard}>
+                    <h3 className={style.pokeName}>{pokemon.name}</h3>
+
+                </div>
+
+                <div className={style.bottomCard}>
+
+                    <div className={style.typesCard}>
+                        {pokemon.types.map((type, index) => {
+                            return (
+                                <div key={index}
+                                    className={`${style.typeText} ${style[type.type.name]}`}>{type.type.name}</div>
+                            )
+                        })}
+                    </div>
+                   
+                </div>
+            </div>
             {status == 'idle' && (
             <button onClick={() => isCaptured ? handleSoltar() : handleCapturar()}>
                 {isCaptured ? "Soltar" : "Capturar"}

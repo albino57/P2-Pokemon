@@ -18,7 +18,7 @@ export const Router = () => {
          <Route path="/home" element={<Home />} />
          <Route path="/pokemon" element={<Pokemons />} />
         <Route path="/pokedex" element={<Pokedex />} />
-        <Route path="/pokemon-creator" element={<PokemonCreator />} />
+        <Route path="/creator" element={<PokemonCreator />} />
         <Route path="/contato" element={<Contato />} />
       </Route>
       <Route path="*" element={<h2>Página Não Encontrada</h2>} />
