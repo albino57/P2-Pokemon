@@ -5,15 +5,16 @@ import fotoSilva from "../../assets/foto-silva.jpg"
 import fotoBnVitor from "../../assets/foto-bnvitor.png"
 import fotoMario from "../../assets/foto-mario.jpeg"
 import fotoMarcos from "../../assets/foto-marcos.jpeg"
+import fotoBreno from "../../assets/foto-breno.jpeg"
 
 
 function Contato (){
     const integrantes = [
     {
         nome: "Breno",
-        foto: "/foto-breno.png",
-        linkedin: "https://linkedin.com",
-        github: "https://github.com"
+        foto: fotoBreno,
+        linkedin: "https://www.linkedin.com/in/breno-fran%C3%A7a-032390208?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+        github: "https://github.com/brenofranca2000"
     },
 
     {
@@ -47,8 +48,8 @@ function Contato (){
     {
         nome: "Paulo",
         foto: "/foto-paulo.png",
-        linkedin: "https://linkedin.com",
-        github: "https://github.com"
+        linkedin: "https://www.linkedin.com/in/paulo-vale-neto-b3a8b6286/",
+        github: "https://github.com/paulocesar-neto"
     },
 
     {
