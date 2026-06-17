@@ -24,6 +24,69 @@ export const Home = () => {
                 value={filtro}
                 onChange={(e) => setFiltro(e.target.value)}
             /> 
+            
+            <FlatList
+                    data={pokemonsFiltrados}
+                    keyExtractor={(item) => String(item.id)}
+                    numColumns={2}
+                    columnWrapperStyle={styles.row}
+                    contentContainerStyle={styles.lista}
+                    renderItem={({ item }) => (
+                      <PokemonCard
+                        pokemon={item}
+                        capturado={estaCapturado(item)}
+                        onCapturar={() => toggleCaptura(item)}
+                      />
+                    )}
+                    ListEmptyComponent={
+                      <Text style={styles.feedbackTexto}>
+                        Nenhum Pokémon encontrado para "{filtro}".
+                      </Text>
+                    }
+                  /> 
+
+            <div className={styles.sobreContainer}>
+                <img className={styles.pokemons} src="src\assets\pokemons.png" alt="" />
+                <div className={styles.txtBox}>
+                    <h1 className={styles.titlePokedex}>Pokédex - Pokémon</h1>
+                    <p className={styles.paragraph}>Pokédex - Pokémon é um projeto React de cards colecionáveis de Pokémons,
+                        onde você pode capturar e armazenar seus Pokémons favoritos na sua Pokédex, e solta-los a hora que quiser.
+                        Busque seus Pokémons na aba de pesquisa ou capture-os na aba Pokémons, administre seus cards na aba Pokédex
+                        onde são armazenados os Pokémons capturados, viva a aventura e capture  Pokémons e se torne um treinador
+                        de Pokémons</p>
+                </div>
+            </div>
+
+
+            <div className={styles.divBlock}>
+                <div className={styles.sobreContainer2}>
+                    <div className={styles.txtBox2}>
+                        <h1 className={styles.titlePokedex2}>Types</h1>
+                        <p className={styles.paragraph2}>Busque e capture seus Pókemons pelo tipo,
+                            monte seu deck de cards Pokémons escolhendo pelo tipo e suas fraquezas</p>
+                    </div>
+                    <img className={styles.pokemonsTipos} src="src\assets\tipoIcon.png" alt="" />
+                </div>
+                <div className={styles.sobreContainer3}>
+                    <div className={styles.txtBox3}>
+                        <h1 className={styles.titlePokedex2}>Evolutions</h1>
+                        <p className={styles.paragraph2}>Veja todas cada uma das evoluçoes dos seus pokémons e
+                            dos outros Pokémons que deseja capturar, colecione cards, e viva na pele de um treinador pokémon </p>
+                    </div>
+                    <img className={styles.pokemonsTipos} src="src\assets\evolucao.png" alt="" />
+                </div>
+
+            </div>
+            <div className={styles.sobreContainer}>
+
+                <div className={styles.txtBox}>
+                    <h1 className={styles.titlePokedex}>Se divirta</h1>
+            
+                </div>
+                <img className={styles.poke} src="src\assets\pokes.png" alt="" />
+            </div>
+
+
         </div>
     </>
 }
