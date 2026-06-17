@@ -1,7 +1,11 @@
-.container{
+.logoBlock{
     
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: row;
-    background-image: url(src/assets/background.jfif);
-    background-size: cover;
-    background-repeat: no-repeat;
+}
+.logo{
+    width: 350px;
+    padding: 10px;
 }

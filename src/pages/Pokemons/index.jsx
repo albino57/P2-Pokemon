@@ -6,8 +6,12 @@ export const Pokemons = () => {
 
     return (
         
-         
-           <PokemonList/>
+           <div className={styles.container}>
+              <div className={styles.logoBlock}>
+                <img className = {styles.logo}src="src/assets/logoPokemon.png" alt="logo" />
+              </div>
+               <PokemonList/>
+           </div>
         
          
     )
