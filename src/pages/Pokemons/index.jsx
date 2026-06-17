@@ -6,9 +6,7 @@ export const Pokemons = () => {
 
     return (
         
-         
-           <PokemonList/>
-        
-         
+               <PokemonList/>
+            
     )
 }
