@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { PokedexContext } from "../../contexts/PokedexContext";
 import style from './styles.module.css'
 import { UNSAFE_useFogOFWarDiscovery } from "react-router";
@@ -10,6 +10,25 @@ export const CardPokemons = ({ pokemon }) => {
 
     const imagemPokemon = pokemon.sprites.other['official-artwork'].front_default
 
+
+    const [status, setStatus] = useState('idle');
+    
+    function handleCapturar() {
+        setStatus('capturando');
+
+        setTimeout(() => {
+            addPokemon(pokemon);
+            setStatus('capturado');
+        }, 1500);
+
+        setTimeout(() => {
+            setStatus('idle');
+        }, 3000);
+    }          
+    
+    function handleSoltar() {
+        dropPokemon(pokemon.id);
+    }
 
     return (
         <div className={style.pokeCard}>
@@ -37,13 +56,13 @@ export const CardPokemons = ({ pokemon }) => {
                    
                 </div>
             </div>
-
-            <button className={style.captureBttn} onClick={() => isCaptured ? dropPokemon(pokemon.id) : addPokemon(pokemon)}>
+            {status == 'idle' && (
+            <button onClick={() => isCaptured ? handleSoltar() : handleCapturar()}>
                 {isCaptured ? "Soltar" : "Capturar"}
             </button>
-
-
-
+            )}
+            {status === 'capturando' && <p>Capturando...</p>}
+            {status === 'capturado' && <p>Capturado!</p>}
         </div>
     )
 }

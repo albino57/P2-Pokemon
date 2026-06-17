@@ -67,3 +67,20 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    background: darkorange;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+    color: white;
+    height: 3rem;
+    width: 100%;
+}
+
+.footerLink {
+    color: white;
+    text-decoration: none;
+}
