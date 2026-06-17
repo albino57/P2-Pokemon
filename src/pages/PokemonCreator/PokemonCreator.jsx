@@ -7,6 +7,16 @@ export const PokemonCreator = () => {
   const [type, setType] = useState("");
   const [pokemons, setPokemons] = useState([]);
   const [message, setMessage] = useState("");
+  const [toast, setToast] = useState(null);
+  
+
+  const showToast = (message, type = "success") => {
+  setToast({ message, type });
+
+  setTimeout(() => {
+    setToast(null);
+  }, 3000);
+};
 
   useEffect(() => {
     getPokemons()
@@ -20,10 +30,11 @@ export const PokemonCreator = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (name.trim() === "" || type.trim() === "") {
-        alert("Preencha o nome e o tipo do Pokémon!");
-        return;
-    }
+     if (name.trim() === "" || type.trim() === "") {
+    showToast("Preencha o nome e o tipo do Pokémon!", "error");
+    return;
+      }
+
 
     const newPokemon = {
       name,
@@ -35,12 +46,15 @@ export const PokemonCreator = () => {
 
       setPokemons((prev) => [...prev, response.data]);
 
-      setName("");
-      setType("");
+       showToast("Pokémon criado com sucesso!", "success");
+
+    setName("");
+    setType("");
+
     } catch (err) {
-      console.error(err);
-    }
-};
+        showToast("Erro ao criar Pokémon", "error");
+      }
+  };
 
     const handleDelete = async (id) => {
     try {
@@ -54,7 +68,13 @@ export const PokemonCreator = () => {
 
 return (
   <div className={styles.container}>
-    <h1 className={styles.title}>Cadastrar Pokémon</h1>
+    <h1 className={styles.title}> Criar Pokémon</h1>
+   
+    {toast && (
+   <div className={`${styles.toast} ${styles[toast.type]}`}>
+    {toast.message}
+   </div>
+    )}
 
     <form onSubmit={handleSubmit} className={styles.form}>
       <input
@@ -70,7 +90,7 @@ return (
         onChange={(e) => setType(e.target.value)}
       />
       <button type="submit" className={styles.button}>
-        Cadastrar
+        Gerar
       </button>
     </form>
 
