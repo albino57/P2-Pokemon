@@ -1,1 +1,120 @@
 /*Home.module.css*/
+.container{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   gap: 4px;
+}
+
+.sobreContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 30rem;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 8px solid rgba(255, 255, 255, 0.034);
+    border-radius: 20px;
+     margin-left: 100px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.txtBox {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 50%;
+    margin-right: 50px;
+    gap: 80px;
+    color: rgb(0, 0, 0);
+}
+.paragraph{
+    font-size: 25px;
+    text-align: justify;
+}
+.titlePokedex{
+    font-size: 30px;
+}
+.pokemons {
+    width: 500px;
+    height: 450px;
+    margin-right: 50px;
+}
+
+.sobreContainer2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 35%;
+    height: 30rem;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 8px solid rgba(255, 255, 255, 0.034);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+.pokemonsTipos {
+    width: 460px;
+    height: 400px;
+}
+.txtBox2 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: left;
+    width: 80%;
+    gap: 15px;
+    color: rgb(0, 0, 0);
+}
+.paragraph2{
+    font-size: 25px;
+    text-align: justify;
+}
+.titlePokedex2{
+    font-size: 30px;
+}
+.sobreContainer3{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 60%;
+    height: 30rem;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 8px solid rgba(255, 255, 255, 0.034);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.divBlock{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-left: 100px;
+}
+
+.txtBox3 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: left;
+    width: 80%;
+    gap: 30px;
+    color: rgb(0, 0, 0);
+}
+.paragraph3{
+    font-size: 25px;
+    text-align: justify;
+}
+.titlePokedex4{
+    font-size: 30px;
+}

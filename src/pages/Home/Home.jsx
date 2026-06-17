@@ -4,20 +4,14 @@ import styles from "./Home.module.css";
 
 export const Home = () => {
 
-    const [filtro, setFiltro] = useState("");
+ const [filtro, setFiltro] = useState("");
+ const { pokedex, addPokemon, dropPokemon } = useContext(PokedexContext);
 
-    const { pokedex, addPokemon, dropPokemon } = useContext(PokedexContext);
 
-    return <>
-        <div className={styles.container}> 
-            <h2>Pokédex - Pokémon</h2>
-        
-            <h4>Pokédex - Pokémon é um projeto React de cards colecionáveis de Pokémons,
-            onde você pode capturar e armazenar seus Pokémons favoritos na sua Pokédex, e solta-los a hora que quiser
-            busque seus Pokémons na aba de pesquisa ou capture-os na aba Pokémons, administre seus cards na aba Pokédex 
-            onde são armazenados os Pokémons capturados, viva a aventura e capture seus Pokémons favoritos</h4> 
+    return (
+        <div className={styles.container} >
 
-            <input
+             <input
                 className={styles.filtro}
                 type="text"
                 placeholder="Buscar Pokémon pelo nome..."
@@ -67,5 +61,6 @@ export const Home = () => {
 
 
         </div>
-    </>
+    )
+
 }
