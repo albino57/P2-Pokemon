@@ -18,7 +18,7 @@
 }
 
 /*---↓ Padronização da font ↓---*/
-body, input, textarea, button {
+body, input, textarea, button, #root {
   font-size: 1rem;
   font-family: 'Inter', sans-serif;
   background-color: var(--background-color);

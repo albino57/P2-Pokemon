@@ -3,8 +3,4 @@
     grid-template-columns: repeat(5, minmax(220px, 1fr));
     gap: 20px;
     padding: 20px;
-    justify-items: center;
-      background-image: url(src/assets/background.jfif);
-       background-size: cover;
-    background-repeat: no-repeat;
 }

@@ -9,7 +9,7 @@ export const DefaultLayout = () => {
   return (
     <div className={style.layoutContainer}>
       <nav className={style.carousel}>
-        <img className={style.navLogo} src="src\assets\pokedex.png" alt="pokedex" />
+        <img className={style.navLogo} src="src/assets/logoPokemon.png" alt="pokedex" />
       </nav>
       <nav className={style.subNav}>
         <div className={style.linkNavContainer}>
