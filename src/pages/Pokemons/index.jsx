@@ -5,10 +5,9 @@ import styles from './styles.module.css'
 export const Pokemons = () => {
 
     return (
-        <div>
+        <div className={styles.container}>
          <img className = {styles.logoPoke} src="src/assets/pikachu.png" alt="" />
            <PokemonList/>
-
         </div>
          
     )

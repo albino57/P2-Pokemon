@@ -1,27 +1,37 @@
 import { useState,useContext } from "react";
 import style from './styles.module.css';
-import { searchPokemon } from "../../services/PokeAPI/api";
+import { getPokemonDetails, searchPokemon } from "../../services/PokeAPI/pokeAPI";
 import { usePokedex } from "../../contexts/PokedexContext";
+import { CardPokemons } from "../CardPokemons";
 
 
 export const Searchbar = () => {
-    const [search, setSearch] = useState("dito")
+    const [search, setSearch] = useState("")
     const [pokemon, setPokemon] = useState();
 
-    const {pokedex, addPokemon, dropPokemon} = usePokedex();
+    
+    const{setPokeSearch} = usePokedex();
 
     const onChangeHandle = (e) => {
-        console.log("pokemon: ", e.target.value);
-        setSearch(e.target.value);
+        const value = e.target.value;
+        setSearch(value);
+
+        if(value === ""){
+            setPokeSearch(null)
+        }
     }
 
-    const onButtonClickHandle = () => {
-        onSearchHandle(search)
+    const onButtonClickHandle = (e) => {
+        e.preventDefault();
+        if(search.trim() !==""){
+
+            onSearchHandle(search.toLowerCase().trim());
+        }
     }
 
     const onSearchHandle = async (pokemon) => {
-        const results = await searchPokemon(pokemon)
-        setPokemon(results)
+        const results = await getPokemonDetails(pokemon)
+        setPokeSearch(results.data)
     }
 
     return (
@@ -33,34 +43,7 @@ export const Searchbar = () => {
                     <img className={style.pokeButtonImg} src="src\assets\Pokebola-pokeball-png-0.png" alt="pokeButton" />
                 </button>
             </div>
-            {pokemon ? (
-                <div className={style.pokemonCard}>
-                    <div>{pokemon.name}</div>
-                    <p>ID: #{pokemon.id}</p>
-                    <img
-                        src={pokemon.sprites.other["official-artwork"].front_default || pokemon.sprites.front_default}
-                        alt={pokemon.name} />
-
-                    <div className={style.types}>
-                        <h3>Tipos:</h3>
-                        {pokemon.types.map((info) => (
-                            <div key={info.type.name} className={style.typePoke}>
-                                {info.type.name}
-                            </div>
-                        ))}
-                    </div>
-                    <div className={style.stats}>
-                        <h3>Status Base:</h3>
-                        <ul>
-                            {pokemon.stats.map((statInfo) => (
-                                <li key={statInfo.stat.name}>
-                                    <strong>{statInfo.stat.name}:</strong> {statInfo.base_stat}
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                </div>
-            ) : null}
+           
         </div>
 
     )

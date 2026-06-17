@@ -3,16 +3,19 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import { getPokemonList, getPokemonDetails } from '../../services/PokeAPI/pokeAPI'
 import { CardPokemons } from '../CardPokemons'
+import { usePokedex } from '../../contexts/PokedexContext';
 import style from './styles.module.css'
 
 export const PokemonList = () => {
     const [pokemonList, setPokemonList] = useState([]);
     const [loading, setLoading] = useState(true);
     const navigate = useNavigate();
+    const {pokeSearch} = usePokedex();
 
     function fillPokemonList() {
         getPokemonList().then(async (results) => {
             
+           
             const listPoke = results.data.results;
 
             const pokeDetailsPromisses = listPoke.map((pokemon) => {
@@ -38,13 +41,16 @@ export const PokemonList = () => {
     if (loading) {
         return <div>Carregando Pokémons...</div>
     }
-
+  
     return (
         <div className={style.pokemonList}>
-            {pokemonList.map((pokemon) => {
-                return <CardPokemons key={pokemon.id}
-                    pokemon={pokemon} />
-            })}
+            {pokeSearch && pokeSearch.name ? (
+                <CardPokemons key={pokeSearch.id} pokemon={pokeSearch} />
+            ) : (
+                pokemonList.map((pokemon) => (
+                    <CardPokemons key={pokemon.id} pokemon={pokemon} />
+                ))
+            )}
         </div>
     )
 }

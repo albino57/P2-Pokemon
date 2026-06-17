@@ -5,6 +5,7 @@ export const PokedexContext = createContext(null);
 export const PokedexProvider = ({ children }) => {
   
     const [pokedex, setPokedex] = useState([]);
+    const [pokeSearch, setPokeSearch] = useState(null);
 
 
   //---↓ Função para capturar Pokemon ↓---
@@ -29,7 +30,7 @@ export const PokedexProvider = ({ children }) => {
 
 
   return (
-    <PokedexContext.Provider value={{ pokedex , addPokemon, dropPokemon}}>
+    <PokedexContext.Provider value={{ pokedex , addPokemon, dropPokemon, pokeSearch, setPokeSearch}}>
       {children}
     </PokedexContext.Provider>
   );
