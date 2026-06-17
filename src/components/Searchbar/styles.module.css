@@ -91,7 +91,7 @@
 .typePoke[class*="bug"] { background-color: #a78bfa; }
 .typePoke[class*="normal"] { background-color: #a3a3a3; }
 .typePoke[class*="poison"] { background-color: #c084fc; }
-.typePoke[class*="electric"] { background-color: #facc15; text-color: #333; }
+.typePoke[class*="electric"] { background-color: #facc15;}
 .typePoke[class*="ground"] { background-color: #fb923c; }
 .typePoke[class*="fairy"] { background-color: #f472b6; }
 
