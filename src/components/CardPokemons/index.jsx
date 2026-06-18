@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { PokedexContext } from "../../contexts/PokedexContext";
 import style from './styles.module.css'
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 
     const typeBackground = {
     normal: 'src/assets/carstype/normal.png', fire: 'src/assets/carstype/fire.png',
