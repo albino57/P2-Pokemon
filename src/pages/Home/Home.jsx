@@ -12,13 +12,6 @@ export const Home = () => {
     return (
         <div className={styles.container} >
 
-             <input
-                className={styles.filtro}
-                type="text"
-                placeholder="Buscar Pokémon pelo nome..."
-                value={filtro}
-                onChange={(e) => setFiltro(e.target.value)}
-            /> 
             <div className={styles.sobreContainer}>
                 <img className={styles.pokemons} src="src\assets\pokemons.png" alt="" />
                 <div className={styles.txtBox}>
@@ -30,7 +23,6 @@ export const Home = () => {
                         de Pokémons</p>
                 </div>
             </div>
-
 
             <div className={styles.divBlock}>
                 <div className={styles.sobreContainer2}>
@@ -59,8 +51,6 @@ export const Home = () => {
                 </div>
                 <img className={styles.poke} src="src\assets\pokes.png" alt="" />
             </div>
-
-
         </div>
     )
 
