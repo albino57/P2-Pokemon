@@ -6,6 +6,8 @@ import fotoBnVitor from "../../assets/foto-bnvitor.png"
 import fotoMario from "../../assets/foto-mario.jpeg"
 import fotoMarcos from "../../assets/foto-marcos.jpeg"
 import fotoBreno from "../../assets/foto-breno.jpeg"
+import fotoPaulo from "../../assets/foto-paulo.jpeg"
+import fotoRafael from "../../assets/foto-rafael.jpeg"
 
 
 function Contato (){
@@ -27,7 +29,7 @@ function Contato (){
     {
         nome: "Bruno Vitor",
         foto: fotoBnVitor,
-        linkedin: "www.linkedin.com/in/bruno-vitor-25b4ab393",
+        linkedin: "https://www.linkedin.com/in/bruno-vitor-25b4ab393",
         github: "https://github.com/brunovitor-git05"
     },
 
@@ -47,16 +49,16 @@ function Contato (){
 
     {
         nome: "Paulo",
-        foto: "/foto-paulo.png",
+        foto: fotoPaulo,
         linkedin: "https://www.linkedin.com/in/paulo-vale-neto-b3a8b6286/",
         github: "https://github.com/paulocesar-neto"
     },
 
     {
         nome: "Rafael",
-        foto: "/foto-rafael.png",
-        linkedin: "https://linkedin.com",
-        github: "https://github.com"
+        foto: fotoRafael,
+        linkedin: "https://www.linkedin.com/in/rafaelalbino57",
+        github: "https://github.com/albino57"
     }
 ]
 
