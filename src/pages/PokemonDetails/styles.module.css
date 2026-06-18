@@ -1,0 +1,39 @@
+
+.cardStatusPokemonContainer{
+    display: flex;
+      display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.pokemonCard{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     width: 100%;
+}
+
+.idPokemon{
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 300px;
+}
+.imgPokeContainer{
+    background-color: rgba(255, 255, 255, 0.877);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 40%;
+     height: 35rem;
+     border-radius: 30px;
+}
+.imagemPokemon{
+    width: 400px;
+   
+    border-radius: 20px;
+}
+.namePokemon{
+    font-size: 50px;
+    font-weight: bold;
+}

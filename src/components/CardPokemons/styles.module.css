@@ -14,10 +14,13 @@
     text-transform: capitalize;
     background-blend-mode: overlay; 
     background-color: rgba(70, 68, 68, 0.856);
+    transition: transform  all 0.3s ease;
     
 }.pokeCard:hover {
-    transform: scale(1.1);
-    transition: transform 0.2s;
+    transform: translateY(-10px);
+}
+.pokeCard:active {
+    transform: scale(.96);
 }
 
 .bodyCard {

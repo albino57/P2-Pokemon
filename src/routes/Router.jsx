@@ -6,6 +6,7 @@ import { Home } from "../pages/Home/Home";
 import { Pokedex } from "../pages/Pokedex/Pokedex";
 import { Login } from "../pages/Login";
 import { Pokemons } from "../pages/Pokemons";
+import { PokemonDetails } from "../pages/PokemonDetails";
 import { PokemonCreator} from "../pages/PokemonCreator/PokemonCreator"
 import Contato from "../pages/Contato/Contato";
 
@@ -17,6 +18,7 @@ export const Router = () => {
         <Route path="/" element={<Navigate to="/home" replace />} />
          <Route path="/home" element={<Home />} />
          <Route path="/pokemon" element={<Pokemons />} />
+        <Route path=":name/:id" element={<PokemonDetails />} />
         <Route path="/pokedex" element={<Pokedex />} />
         <Route path="/creator" element={<PokemonCreator />} />
         <Route path="/contato" element={<Contato />} />

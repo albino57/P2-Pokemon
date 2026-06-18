@@ -57,7 +57,7 @@ export const PokemonList = ({page,setTotalPage}) => {
                 <CardPokemons key={pokeSearch.id} pokemon={pokeSearch} />
             ) : (
                 pokemonList.map((pokemon) => (
-                    <CardPokemons key={pokemon.id} pokemon={pokemon} />
+                    <CardPokemons  key={pokemon.id} pokemon={pokemon} />
                 ))
             )}
         </div>

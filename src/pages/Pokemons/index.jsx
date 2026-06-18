@@ -9,8 +9,7 @@ export const Pokemons = () => {
     const [page, setPage] = useState(0);
     const [totalPage, setTotalPage] = useState(0);
     
-    
-
+  
     const onLeftClickHandle = () =>{
     
       if(page > 0){
@@ -29,6 +28,7 @@ export const Pokemons = () => {
             page={page} 
             setTotalPage = {setTotalPage}
             />
+
            <Paginacao
            page = {page+1}
            totalPages = {totalPage}
@@ -36,7 +36,6 @@ export const Pokemons = () => {
            onRightClick={onRightClickHandle}
         />
        
-     
       </div>
     )
 }
