@@ -24,7 +24,6 @@ export const Home = () => {
                 </div>
             </div>
 
-
             <div className={styles.divBlock}>
                 <div className={styles.sobreContainer2}>
                     <div className={styles.txtBox2}>
@@ -52,8 +51,6 @@ export const Home = () => {
                 </div>
                 <img className={styles.poke} src="src\assets\pokes.png" alt="" />
             </div>
-
-
         </div>
     )
 
