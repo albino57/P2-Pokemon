@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { PokedexContext } from "../../contexts/PokedexContext";
 import style from './styles.module.css'
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 
     const typeBackground = {
     normal: 'src/assets/carstype/normal.png', fire: 'src/assets/carstype/fire.png',
@@ -45,9 +45,9 @@ export const CardPokemons = ({ pokemon }) => {
     }
     
     function handleOpenCardPokemon(){
-        navigate (`/${pokemon.name}/${pokemon.id}`,{
+        navigate (`/pokemon/${pokemon.id}`),{
             state:{pokemon} 
-        })}
+        }}
 
     let imagemPokemon = pokemon.sprites.versions["generation-v"]
     ["black-white"].animated.front_default

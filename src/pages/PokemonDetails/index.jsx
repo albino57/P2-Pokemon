@@ -3,7 +3,7 @@ import { useParams, useNavigate, useLocation } from "react-router-dom";
 import { getPokemonDetails } from "../../services/PokeAPI/pokeAPI";
 import { getPokemon3D } from "../../services/PokeAPI3D/api";
 import style from './styles.module.css'
-import { Paginacao } from "../../components/Paginacao";
+import "@google/model-viewer";
 
 export const PokemonDetails = () => {
 
@@ -90,7 +90,7 @@ export const PokemonDetails = () => {
         );
 
     return (
-        <div className={style.cardStatusPokemonContainer}>
+        <div className={style.cardStatusPokemonContainer} >
             <div>
                 <button>
                     voltar
@@ -99,10 +99,7 @@ export const PokemonDetails = () => {
 
             <div className={style.pokemonCard}>
 
-                <p className={style.idPokemon}>
-                    ID: #{pokemon.id}
-                </p>
-
+               
                 <div className={style.modelContainer}>
 
                     {currentModel && (
@@ -113,14 +110,16 @@ export const PokemonDetails = () => {
                             shadow-intensity="1"
                             exposure="1"
                             style={{
-                                width: "500px",
+                                width: "700px",
                                 height: "500px"
                             }}
                         />
                     )}
-                </div>
 
                 <div className={style.formsContainer}>
+                    <div className={style.namePokemon}>
+                    {pokemon.name}
+                </div>
                     {pokemon3D?.forms?.map((form) => (
                         <button
                             key={form.formName}
@@ -132,14 +131,14 @@ export const PokemonDetails = () => {
                         </button>
                     ))}
                 </div>
-
-               
+                </div>
             </div>
 
             <div className={style.typesStatus}>
-                 <div className={style.namePokemon}>
-                    {pokemon.name}
-                </div>
+               
+                  <p className={style.idPokemon}>
+                    ID: #{pokemon.id}
+                </p>
                     <h3 className={style.txtTypes}>Tipos:</h3>
                <div className={style.types}>
                     {pokemon.types.map((info) => (
@@ -150,9 +149,9 @@ export const PokemonDetails = () => {
                 </div>
                 <div className={style.stats}>
                     <h3>Status Pokemon:</h3>
-                    <div>
+                    <div className={style.typeNameContainer}>
                         {pokemon.stats.map((statInfo) => (
-                            <div key={statInfo.stat.name}>
+                            <div  className={style.typeName} key={statInfo.stat.name}>
                                 <strong>{statInfo.stat.name}:</strong> {statInfo.base_stat}
                             </div>
                         ))}
