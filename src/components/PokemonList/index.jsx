@@ -6,17 +6,26 @@ import { CardPokemons } from '../CardPokemons'
 import { usePokedex } from '../../contexts/PokedexContext';
 import style from './styles.module.css'
 
-export const PokemonList = () => {
+export const PokemonList = ({page,setTotalPage}) => {
     const [pokemonList, setPokemonList] = useState([]);
     const [loading, setLoading] = useState(true);
     const navigate = useNavigate();
     const {pokeSearch} = usePokedex();
+    
+    const pokemonsPorPages = 45;
 
     function fillPokemonList() {
-        getPokemonList().then(async (results) => {
+
+        const offset = page * pokemonsPorPages;
+
+        getPokemonList(pokemonsPorPages, offset).then(async (results) => {
+
+            const limitePokemonsAPI = 675;
+
+           const pokemonsTotal = Math.min(results.data.count, limitePokemonsAPI)
+           setTotalPage(Math.ceil(pokemonsTotal/ pokemonsPorPages));
             
-           
-            const listPoke = results.data.results;
+           const listPoke = results.data.results;
 
             const pokeDetailsPromisses = listPoke.map((pokemon) => {
 
@@ -36,7 +45,7 @@ export const PokemonList = () => {
     }
     useEffect(() => {
         fillPokemonList();
-    }, []);
+    }, [page]);
 
     if (loading) {
         return <div>Carregando Pokémons...</div>

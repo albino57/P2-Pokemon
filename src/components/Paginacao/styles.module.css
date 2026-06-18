@@ -1,0 +1,23 @@
+.containerPages{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 100px;
+    background: rgba(255, 255, 255, 0.438);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 8px solid rgba(255, 255, 255, 0.034);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+.button{
+    border-radius: 50px;
+    width: 60px;
+    height: 30px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 255, 0.692);
+}
+.txtPage{
+    font-size: 25px;
+}

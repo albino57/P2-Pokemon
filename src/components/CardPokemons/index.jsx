@@ -1,9 +1,6 @@
 import { useContext, useState } from "react";
 import { PokedexContext } from "../../contexts/PokedexContext";
 import style from './styles.module.css'
-import { UNSAFE_useFogOFWarDiscovery } from "react-router";
-
-
 
     const typeBackground = {
     normal: 'src/assets/carstype/normal.png',

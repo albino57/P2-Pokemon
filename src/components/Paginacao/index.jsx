@@ -1,15 +1,23 @@
 import React from "react";
+import styles from './styles.module.css'
 
 export const Paginacao = (props) => {
-
-    const {currentPage,maxPageLimit,minPageLimit} = props;
-    const totalPages = props.response.totalPages-1;
-    const data = props.response.data;
-
+    
+    const {page,totalPages,onLeftClick, onRightClick} = props;
+    
+     
     return (
 
-        <div> 
-
+        <div className= {styles.containerPages}> 
+          
+           <button className = {styles.button}onClick={onLeftClick}
+           >◀</button>
+           <div className={styles.txtPage}
+           >
+              {page} de {totalPages}
+           </div>
+           <button className = {styles.button} onClick={onRightClick}
+           >▶</button>
         </div>
     )
 
