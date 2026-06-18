@@ -12,7 +12,7 @@ export const PokemonList = ({page,setTotalPage}) => {
     const navigate = useNavigate();
     const {pokeSearch} = usePokedex();
     
-    const pokemonsPorPages = 45;
+    const pokemonsPorPages = 25;
 
     function fillPokemonList() {
 
@@ -20,7 +20,7 @@ export const PokemonList = ({page,setTotalPage}) => {
 
         getPokemonList(pokemonsPorPages, offset).then(async (results) => {
 
-            const limitePokemonsAPI = 675;
+            const limitePokemonsAPI = 625;
 
            const pokemonsTotal = Math.min(results.data.count, limitePokemonsAPI)
            setTotalPage(Math.ceil(pokemonsTotal/ pokemonsPorPages));

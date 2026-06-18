@@ -9,7 +9,7 @@ export const Paginacao = (props) => {
     return (
 
         <div className= {styles.containerPages}> 
-          
+         
            <button className = {styles.button}onClick={onLeftClick}
            >◀</button>
            <div className={styles.txtPage}
