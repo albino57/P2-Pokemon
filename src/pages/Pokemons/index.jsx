@@ -25,16 +25,16 @@ export const Pokemons = () => {
     
     return (
       <div>
+        <PokemonList
+            page={page} 
+            setTotalPage = {setTotalPage}
+            />
            <Paginacao
            page = {page+1}
            totalPages = {totalPage}
            onLeftClick={onLeftClickHandle}
            onRightClick={onRightClickHandle}
         />
-        <PokemonList
-            page={page} 
-            setTotalPage = {setTotalPage}
-            />
        
      
       </div>
