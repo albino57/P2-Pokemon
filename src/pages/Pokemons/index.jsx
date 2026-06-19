@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Paginacao } from "../../components/Paginacao";
 import { PokemonList } from "../../components/PokemonList";
 import styles from './styles.module.css'
@@ -21,6 +21,13 @@ export const Pokemons = () => {
           setPage(page + 1);
          }
     }
+
+    useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+    }, [page]);
     
     return (
       <div>
