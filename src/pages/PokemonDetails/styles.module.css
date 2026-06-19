@@ -39,6 +39,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    gap: 15px;
     width: 700px;
     height: 600px;
     background-color: rgb(220, 20, 60);
@@ -51,7 +52,7 @@
 
 .txtTypes {
     font-size: 40px;
-
+    color: gold;
 }
 
 .types {
@@ -63,7 +64,9 @@
 }
 
 .typePoke {
-    font-size: 25px;
+    font-size: 30px;
+    font-weight: bolder;
+    text-transform: capitalize;
     display: flex;
     justify-content: row;
 }
@@ -82,6 +85,9 @@
     justify-content: center;
 
 
+}.statsTitulo{
+    color: gold;
+    font-size: 40px;
 }
 
 .modelContainer {
