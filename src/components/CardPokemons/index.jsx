@@ -1,39 +1,26 @@
 import { useContext, useState } from "react";
 import { PokedexContext } from "../../contexts/PokedexContext";
 import style from './styles.module.css'
+import { useNavigate } from "react-router";
 
     const typeBackground = {
-    normal: 'src/assets/carstype/normal.png',
-    fire: 'src/assets/carstype/fire.png',
-    water: 'src/assets/carstype/water.png',
-    electric: 'src/assets/carstype/eletric.png',
-    grass: 'src/assets/carstype/grass.png',
-    ice: 'src/assets/carstype/ice.png',
-    fighting: 'src/assets/carstype/fighting.png',
-    poison: 'src/assets/carstype/poison.png',
-    ground: 'src/assets/carstype/ground.png',
-    flying: 'src/assets/carstype/flying.png',
-    psychic: 'src/assets/carstype/pysich.png',
-    bug: 'src/assets/carstype/bug.png',
-    rock: 'src/assets/carstype/rock.png',
-    ghost: 'src/assets/carstype/ghost.png',
-    dragon: 'src/assets/carstype/dragon.png',
-    dark: 'src/assets/carstype/dark.png',
-    steel: 'src/assets/carstype/steel.png',
-    fairy: 'src/assets/carstype/fairy.png',
+    normal: 'src/assets/carstype/normal.png', fire: 'src/assets/carstype/fire.png',
+    water: 'src/assets/carstype/water.png',electric: 'src/assets/carstype/eletric.png',
+    grass: 'src/assets/carstype/grass.png', ice: 'src/assets/carstype/ice.png',
+    fighting: 'src/assets/carstype/fighting.png', poison: 'src/assets/carstype/poison.png',
+    ground: 'src/assets/carstype/ground.png', flying: 'src/assets/carstype/flying.png',
+    psychic: 'src/assets/carstype/pysich.png',bug: 'src/assets/carstype/bug.png',
+    rock: 'src/assets/carstype/rock.png', ghost: 'src/assets/carstype/ghost.png',
+    dragon: 'src/assets/carstype/dragon.png',dark: 'src/assets/carstype/dark.png',
+    steel: 'src/assets/carstype/steel.png', fairy: 'src/assets/carstype/fairy.png',
 };
 
 export const CardPokemons = ({ pokemon }) => {
     const { pokedex, addPokemon, dropPokemon } = useContext(PokedexContext);
 
-    const isCaptured = pokedex.some((item) => item.id === pokemon.id);
+    const navigate = useNavigate();
 
-    let imagemPokemon = pokemon.sprites.versions["generation-v"]
-    ["black-white"].animated.front_default
-  
-    if(imagemPokemon === null){
-         imagemPokemon = `https://play.pokemonshowdown.com/sprites/ani/${pokemon.name}.gif`;
-    }
+    const isCaptured = pokedex.some((item) => item.id === pokemon.id);
 
     const [status, setStatus] = useState('idle');
   
@@ -56,14 +43,26 @@ export const CardPokemons = ({ pokemon }) => {
     function handleSoltar() {
         dropPokemon(pokemon.id);
     }
+    
+    function handleOpenCardPokemon(){
+        navigate (`/pokemon/${pokemon.id}`),{
+            state:{pokemon} 
+        }}
+
+    let imagemPokemon = pokemon.sprites.versions["generation-v"]
+    ["black-white"].animated.front_default
+  
+    if(imagemPokemon === null){
+         imagemPokemon = `https://play.pokemonshowdown.com/sprites/ani/${pokemon.name}.gif`;
+    }
 
     return (
-        <div className={style.pokeCard}
+        <div className={style.pokeCard} onClick={handleOpenCardPokemon}
            style={{ 
                 backgroundImage: `url(${backgroundImage})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center'
-            }}
+            } }
         >
             <div className={style.idPoke}>#{pokemon.id}</div>
             <div className={style.cardImg}>
@@ -89,8 +88,10 @@ export const CardPokemons = ({ pokemon }) => {
                    
                 </div>
             </div>
+             
             {status == 'idle' && (
-            <button className = {style.captureBttn} onClick={() => isCaptured ? handleSoltar() : handleCapturar()}>
+            <button className = {style.captureBttn} onClick={(e) =>{e.stopPropagation();
+                        isCaptured ? handleSoltar() : handleCapturar()}}>
                 {isCaptured ? "Soltar" : "Capturar"}
             </button>
             )}
