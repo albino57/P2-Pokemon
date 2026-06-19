@@ -91,17 +91,23 @@ export const PokemonDetails = () => {
 
     return (
         <div className={style.cardStatusPokemonContainer} >
-            <div>
-                <button>
-                    voltar
-                </button>
-            </div>
+
 
             <div className={style.pokemonCard}>
 
-               
+                <div className={style.voltarButtonContainer}>
+                    <button className={style.voltarButton} onClick={() => navigate(-1)}>
+                       🠸 Voltar
+                    </button>
+                </div>
+
                 <div className={style.modelContainer}>
 
+
+
+                    <div className={style.namePokemon}>
+                        {pokemon.name}
+                    </div>
                     {currentModel && (
                         <model-viewer
                             src={currentModel.model}
@@ -116,31 +122,28 @@ export const PokemonDetails = () => {
                         />
                     )}
 
-                <div className={style.formsContainer}>
-                    <div className={style.namePokemon}>
-                    {pokemon.name}
-                </div>
-                    {pokemon3D?.forms?.map((form) => (
-                        <button
-                            key={form.formName}
-                            onClick={() =>
-                                setSelectedForm(form.formName)
-                            }
-                        >
-                            {form.formName}
-                        </button>
-                    ))}
-                </div>
+                    <div className={style.formsContainer}>
+                        {pokemon3D?.forms?.map((form) => (
+                            <button className={style.formsButton}
+                                key={form.formName}
+                                onClick={() =>
+                                    setSelectedForm(form.formName)
+                                }
+                            >
+                                {form.formName}
+                            </button>
+                        ))}
+                    </div>
                 </div>
             </div>
 
             <div className={style.typesStatus}>
-               
-                  <p className={style.idPokemon}>
+
+                <p className={style.idPokemon}>
                     ID: #{pokemon.id}
                 </p>
-                    <h3 className={style.txtTypes}>Tipos:</h3>
-               <div className={style.types}>
+                <h3 className={style.txtTypes}>Tipos:</h3>
+                <div className={style.types}>
                     {pokemon.types.map((info) => (
                         <div key={info.type.name} className={style.typePoke}>
                             {info.type.name}
@@ -151,20 +154,13 @@ export const PokemonDetails = () => {
                     <h3>Status Pokemon:</h3>
                     <div className={style.typeNameContainer}>
                         {pokemon.stats.map((statInfo) => (
-                            <div  className={style.typeName} key={statInfo.stat.name}>
+                            <div className={style.typeName} key={statInfo.stat.name}>
                                 <strong>{statInfo.stat.name}:</strong> {statInfo.base_stat}
                             </div>
                         ))}
                     </div>
                 </div>
-
             </div>
-           
-        
         </div>
-
-
     )
-
-
 }
