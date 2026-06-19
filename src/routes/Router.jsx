@@ -5,6 +5,7 @@ import { DefaultLayout } from "../layouts/DefaultLayout";
 import { Home } from "../pages/Home/Home";
 import { Pokedex } from "../pages/Pokedex/Pokedex";
 import { Login } from "../pages/Login";
+import Cadastro from "../pages/Cadastro"; 
 import { Pokemons } from "../pages/Pokemons";
 import { PokemonDetails } from "../pages/PokemonDetails";
 import { PokemonCreator} from "../pages/PokemonCreator/PokemonCreator"
@@ -14,6 +15,8 @@ export const Router = () => {
   return (
     <Routes>
       <Route path="/login" element={<Login />} />
+      <Route path="/cadastro" element={<Cadastro />} /> 
+      
       <Route element={<DefaultLayout />}>
         <Route path="/" element={<Navigate to="/home" replace />} />
          <Route path="/home" element={<Home />} />
