@@ -3,34 +3,34 @@ import { Outlet, Link } from "react-router-dom";
 import style from './styles.module.css';
 import { Searchbar } from "../components/Searchbar";
 
-
 export const DefaultLayout = () => {
-
   return (
     <div className={style.layoutContainer}>
       <nav className={style.carousel}>
         <img className={style.navLogo} src="src/assets/logoPokemon.png" alt="pokedex" />
 
         <div className={style.entrarContainer}>
-        <Link className={style.linkNav}  to="/login">
+          <Link className={style.linkNav} to="/login">
             <button className={style.entrar}>
-            Entrar
+              Entrar
             </button>
-        </Link>
+          </Link>
 
-        <p>|</p>
-          <Link className={style.linkCad}>Cadastre-se</Link>
+          <p>|</p>
+          
+          <Link className={style.linkCad} to="/cadastro">
+            Cadastre-se
+          </Link>
         </div>
-      
       </nav>
+
       <nav className={style.subNav}>
         <div className={style.linkNavContainer}>
-          <Link className={style.linkNav}  to="/home">Home</Link>
-          <Link className={style.linkNav}  to="/pokemon">Pokémons</Link>
-          <Link className={style.linkNav}  to="/pokedex">Pokédex</Link>
-          <Link className={style.linkNav} to = "/creator">New Pokémons</Link>
-           <Searchbar 
-              />
+          <Link className={style.linkNav} to="/home">Home</Link>
+          <Link className={style.linkNav} to="/pokemon">Pokémons</Link>
+          <Link className={style.linkNav} to="/pokedex">Pokédex</Link>
+          <Link className={style.linkNav} to="/creator">New Pokémons</Link>
+          <Searchbar />
         </div>
       </nav>
 
@@ -39,16 +39,15 @@ export const DefaultLayout = () => {
           <div className={style.divOutlet}>
             <Outlet />
           </div>
-          
         </main>
-        
       </div>
+
       <footer>
-            <p>Pokemon © 2026 - Projeto Serratec</p>
-            <Link to="/contato" className="footerLink">
-              Contato
-            </Link>
-          </footer>
+        <p>Pokemon © 2026 - Projeto Serratec</p>
+        <Link to="/contato" className="footerLink">
+          Contato
+        </Link>
+      </footer>
     </div>
   );
 };
