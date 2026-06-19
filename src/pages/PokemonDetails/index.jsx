@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { useParams, useNavigate, useLocation } from "react-router-dom";
 import { getPokemonDetails } from "../../services/PokeAPI/pokeAPI";
 import { getPokemon3D } from "../../services/PokeAPI3D/api";
 import style from './styles.module.css'
 import "@google/model-viewer";
+import { PokedexContext } from "../../contexts/PokedexContext";
 
 export const PokemonDetails = () => {
 
@@ -17,6 +18,10 @@ export const PokemonDetails = () => {
     const [loading, setLoading] = useState(!pokemonState);
     const [pokemon3D, setPokemon3D] = useState(null);
     const [selectedForm, setSelectedForm] = useState("regular");
+
+    const { pokedex, addPokemon, dropPokemon } = useContext(PokedexContext);
+    const isCaptured = pokedex.some((item) => item.id === pokemon.id);
+    const [status, setStatus] = useState('idle');
 
 
     async function loadCardPokemon() {
@@ -89,6 +94,25 @@ export const PokemonDetails = () => {
                 form.formName === selectedForm
         );
 
+        
+
+        function handleCapturar() {
+        setStatus('capturando');
+
+        setTimeout(() => {
+            addPokemon(pokemon);
+            setStatus('capturado');
+        }, 1500);
+
+        setTimeout(() => {
+            setStatus('idle');
+        }, 3000);
+        }          
+    
+        function handleSoltar() {
+            dropPokemon(pokemon.id);
+        }
+
     return (
         <div className={style.cardStatusPokemonContainer} >
 
@@ -159,6 +183,16 @@ export const PokemonDetails = () => {
                             </div>
                         ))}
                     </div>
+                </div>
+                <div>
+                    {status == 'idle' && (
+                        <button className = {style.captureBttn} onClick={(e) =>{e.stopPropagation();
+                            isCaptured ? handleSoltar() : handleCapturar()}}>
+                            {isCaptured ? "Soltar" : "Capturar"}
+                        </button>
+                        )}
+                    {status === 'capturando' && <div className={style.captureBttnStatus}>Capturando...</div>}
+                    {status === 'capturado' && <div className={style.captureBttnStatus}>Capturado!</div>}
                 </div>
             </div>
         </div>

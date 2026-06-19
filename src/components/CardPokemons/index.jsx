@@ -95,8 +95,8 @@ export const CardPokemons = ({ pokemon }) => {
                 {isCaptured ? "Soltar" : "Capturar"}
             </button>
             )}
-            {status === 'capturando' && <div className={style.captureBttn}>Capturando...</div>}
-            {status === 'capturado' && <div className={style.captureBttn}>Capturado!</div>}
+            {status === 'capturando' && <div className={style.captureBttnStatus}>Capturando...</div>}
+            {status === 'capturado' && <div className={style.captureBttnStatus}>Capturado!</div>}
         </div>
     )
 }
