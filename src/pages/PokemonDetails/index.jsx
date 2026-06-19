@@ -20,7 +20,7 @@ export const PokemonDetails = () => {
     const [selectedForm, setSelectedForm] = useState("regular");
 
     const { pokedex, addPokemon, dropPokemon } = useContext(PokedexContext);
-    const isCaptured = pokedex.some((item) => item.id === pokemon.id);
+    const isCaptured = pokedex.some((item) => item?.id === pokemon?.id);
     const [status, setStatus] = useState('idle');
 
 
