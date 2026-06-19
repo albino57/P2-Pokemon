@@ -6,7 +6,6 @@
     flex-direction: row;
     width: 80%;
     height: 40rem;
-
 }
 
 .pokemonCard {
@@ -17,21 +16,17 @@
     width: 100%;
     height: 30rem;
     border-radius: 20px;
-
 }
 
 .idPokemon {
     font-size: 18px;
     font-weight: bold;
-
 }
 
 .namePokemon {
     font-size: 50px;
     font-weight: bold;
     text-transform: capitalize;
-
-
 }
 
 .typesStatus {
@@ -39,6 +34,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    gap: 15px;
     width: 700px;
     height: 600px;
     background-color: rgb(220, 20, 60);
@@ -51,7 +47,7 @@
 
 .txtTypes {
     font-size: 40px;
-
+    color: gold;
 }
 
 .types {
@@ -63,7 +59,9 @@
 }
 
 .typePoke {
-    font-size: 25px;
+    font-size: 30px;
+    font-weight: bolder;
+    text-transform: capitalize;
     display: flex;
     justify-content: row;
 }
@@ -71,7 +69,6 @@
 .typeName {
     text-transform: capitalize;
     font-weight: bolder;
-
 }
 
 .stats {
@@ -80,8 +77,9 @@
     flex-direction: column;
     gap: 10px;
     justify-content: center;
-
-
+}.statsTitulo{
+    color: gold;
+    font-size: 40px;
 }
 
 .modelContainer {
@@ -94,8 +92,8 @@
     height: 600px;
     margin-left: 250px;
     background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
     border: 8px solid rgba(255, 255, 255, 0.034);
     border-radius: 20px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);

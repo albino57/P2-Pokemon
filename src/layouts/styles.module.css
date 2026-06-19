@@ -78,7 +78,7 @@
     width: 100%;
     flex-direction: row;
     overflow: hidden;
-    background-image: url(src/assets/background.jfif);
+    background-image: url(src/assets/background1.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

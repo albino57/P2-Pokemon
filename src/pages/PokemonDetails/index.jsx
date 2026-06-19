@@ -151,7 +151,7 @@ export const PokemonDetails = () => {
                     ))}
                 </div>
                 <div className={style.stats}>
-                    <h3>Status Pokemon:</h3>
+                    <h3 className={style.statsTitulo}>Status Pokemon:</h3>
                     <div className={style.typeNameContainer}>
                         {pokemon.stats.map((statInfo) => (
                             <div className={style.typeName} key={statInfo.stat.name}>
