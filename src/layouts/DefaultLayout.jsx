@@ -33,15 +33,13 @@ export const DefaultLayout = () => {
               />
         </div>
       </nav>
-
+      
       <div className={style.mainContainer}>
         <main className={style.main}>
           <div className={style.divOutlet}>
             <Outlet />
           </div>
-          
         </main>
-        
       </div>
       <footer>
             <p>Pokemon © 2026 - Projeto Serratec</p>
