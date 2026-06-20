@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import styles from './Cadastro.module.css';
+import { useNavigate } from 'react-router-dom';
 
 export default function Cadastro({ onAlternarTela }) {
     const [nome, setNome] = useState('');
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
     const [confirmarSenha, setConfirmarSenha] = useState('');
+    const navigate = useNavigate();
 
     const handleCadastro = (e) => {
         e.preventDefault();
@@ -46,7 +48,14 @@ export default function Cadastro({ onAlternarTela }) {
 
     return (
         <div className={styles.container}>
+            
             <div className={styles.card}>
+                <div className={styles.voltarButtonContainer}>
+                    <button className={styles.voltarButton} onClick={() => navigate('/home')}>
+                       🠸 Voltar
+                    </button>
+                </div>
+                
                 <h2>Criar Conta Pokédex</h2>
                 
                 <form onSubmit={handleCadastro}>
