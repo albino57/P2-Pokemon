@@ -2,23 +2,25 @@ import { useState, useEffect } from "react";
 import { Paginacao } from "../../components/Paginacao";
 import { PokemonList } from "../../components/PokemonList";
 import styles from './styles.module.css'
+import { useSearchParams } from "react-router-dom";
 
 
 export const Pokemons = () => {
 
-    const [page, setPage] = useState(0);
+    const [searchParams, setSearchParams] = useSearchParams();
+    const page = Number(searchParams.get("page")) || 0;
     const [totalPage, setTotalPage] = useState(0);
     
   
     const onLeftClickHandle = () =>{
     
       if(page > 0){
-         setPage (page -1);
+         setSearchParams({ page: page - 1 });
       }
     }
     const onRightClickHandle = () =>{
          if(page + 1 < totalPage ){
-          setPage(page + 1);
+          setSearchParams({ page: page + 1 });
          }
     }
 
