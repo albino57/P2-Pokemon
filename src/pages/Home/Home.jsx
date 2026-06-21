@@ -19,8 +19,8 @@ export const Home = () => {
                     <p className={styles.paragraph}>Pokédex - Pokémon é um projeto React de cards colecionáveis de Pokémons,
                         onde você pode capturar e armazenar seus Pokémons favoritos na sua Pokédex, e solta-los a hora que quiser.
                         Busque seus Pokémons na aba de pesquisa ou capture-os na aba Pokémons, administre seus cards na aba Pokédex
-                        onde são armazenados os Pokémons capturados, viva a aventura e capture  Pokémons e se torne um treinador
-                        de Pokémons</p>
+                        onde são armazenados os Pokémons capturados. Viva a aventura, capture Pokémons e se torne um treinador
+                        de Pokémons.</p>
                 </div>
             </div>
 
@@ -28,16 +28,16 @@ export const Home = () => {
                 <div className={styles.sobreContainer2}>
                     <div className={styles.txtBox2}>
                         <h1 className={styles.titlePokedex2}>Types</h1>
-                        <p className={styles.paragraph2}>Busque e capture seus Pókemons pelo tipo,
-                            monte seu deck de cards Pokémons escolhendo pelo tipo e suas fraquezas</p>
+                        <p className={styles.paragraph2}>Busque e capture seus Pókemons pelo tipo.
+                            Monte seu deck de cards Pokémons escolhendo pelo tipo e suas fraquezas:</p>
                     </div>
                     <img className={styles.pokemonsTipos} src="src\assets\tipoIcon.png" alt="" />
                 </div>
                 <div className={styles.sobreContainer3}>
                     <div className={styles.txtBox3}>
                         <h1 className={styles.titlePokedex2}>Evolutions</h1>
-                        <p className={styles.paragraph2}>Veja todas cada uma das evoluçoes dos seus pokémons e
-                            dos outros Pokémons que deseja capturar, colecione cards, e viva na pele de um treinador pokémon </p>
+                        <p className={styles.paragraph2}>Veja cada uma das evoluções de seus pokémons e
+                            de quaisquer outros que desejar capturar, colecione cards e seja um treinador pokémon. </p>
                     </div>
                     <img className={styles.pokemonsTipos} src="src\assets\evolucao.png" alt="" />
                 </div>
@@ -46,7 +46,7 @@ export const Home = () => {
             <div className={styles.sobreContainer}>
 
                 <div className={styles.txtBox}>
-                    <h1 className={styles.titlePokedex}>Se divirta</h1>
+                    <h1 className={styles.titlePokedex}>Divirta-se!</h1>
             
                 </div>
                 <img className={styles.poke} src="src\assets\pokes.png" alt="" />
