@@ -19,7 +19,9 @@ export const DefaultLayout = () => {
           <p>|</p>
           
           <Link className={style.linkCad} to="/cadastro">
+            <button className={style.cadastrar}>
             Cadastre-se
+            </button>
           </Link>
         </div>
       </nav>
@@ -45,7 +47,9 @@ export const DefaultLayout = () => {
       <footer>
         <p>Pokemon © 2026 - Projeto Serratec</p>
         <Link to="/contato" className="footerLink">
+          <button className={style.contato}>
           Contato
+          </button>
         </Link>
       </footer>
     </div>

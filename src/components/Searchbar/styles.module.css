@@ -12,12 +12,27 @@
     border-style: none;
     border: none;
     padding-inline: 20px;
+    cursor: pointer;
 }
+
+
+.searchinput:hover{
+    transform: translateY(-3px);
+}
+
+
 .pokeButtonImg{
     width:30px;
     margin-top: 3px;
+    cursor: pointer;
    
 }
+
+
+.pokeButtonImg:hover{
+    transform: translateY(-2px);
+}
+
 .pokeButton{
      width: 40px;
     border-radius: 20px;
