@@ -157,13 +157,3 @@
   background-color: #ef4444;
 }
 
-.successCard {
-  background-color: #22c55e;
-  color: white;
-  padding: 12px;
-  border-radius: 10px;
-  margin-bottom: 15px;
-  font-weight: bold;
-  text-align: center;
-  animation: fadeIn 0.3s ease;
-}
