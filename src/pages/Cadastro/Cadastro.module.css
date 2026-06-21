@@ -70,3 +70,14 @@
 .link:hover {
     text-decoration: underline;
 }
+
+.voltarButtonContainer {
+    margin-bottom: 10px;
+}
+.voltarButton {
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+}

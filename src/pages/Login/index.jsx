@@ -42,6 +42,11 @@ export const Login = () => {
     return (
         <div className={style.background}>
             <div className={style.loginContainer}>
+                <div className={style.voltarButtonContainer}>
+                    <button className={style.voltarButton} onClick={() => navigate('/home')}>
+                       🠸 Voltar
+                    </button>
+            </div>
                 <img className={style.pokedexLogo} src="src\assets\logoPoke.png" alt="pokedex" />
                 
                 {/* Transformamos para aceitar o envio quando apertar Enter */}

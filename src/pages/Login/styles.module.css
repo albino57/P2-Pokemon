@@ -12,7 +12,7 @@
 }
 .pokedexLogo{
     width: 500px;
-    margin-bottom: -70px;
+    margin-bottom: -100px;
 }
 .loginContainer{
     display: flex;
@@ -77,4 +77,16 @@
     font-family: sans-serif;
     border-color: rgb(0, 0, 0);
     border-width: 3px;
+}
+
+.voltarButtonContainer {
+    align-self: flex-start;
+    margin-bottom: 10px;
+}
+.voltarButton {
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
 }
