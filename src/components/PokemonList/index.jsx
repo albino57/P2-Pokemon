@@ -3,17 +3,29 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import { getPokemonList, getPokemonDetails } from '../../services/PokeAPI/pokeAPI'
 import { CardPokemons } from '../CardPokemons'
+import { usePokedex } from '../../contexts/PokedexContext';
 import style from './styles.module.css'
 
-export const PokemonList = () => {
+export const PokemonList = ({page,setTotalPage}) => {
     const [pokemonList, setPokemonList] = useState([]);
     const [loading, setLoading] = useState(true);
     const navigate = useNavigate();
+    const {pokeSearch} = usePokedex();
+    
+    const pokemonsPorPages = 25;
 
     function fillPokemonList() {
-        getPokemonList().then(async (results) => {
+
+        const offset = page * pokemonsPorPages;
+
+        getPokemonList(pokemonsPorPages, offset).then(async (results) => {
+
+            const limitePokemonsAPI = 625;
+
+           const pokemonsTotal = Math.min(results.data.count, limitePokemonsAPI)
+           setTotalPage(Math.ceil(pokemonsTotal/ pokemonsPorPages));
             
-            const listPoke = results.data.results;
+           const listPoke = results.data.results;
 
             const pokeDetailsPromisses = listPoke.map((pokemon) => {
 
@@ -33,18 +45,21 @@ export const PokemonList = () => {
     }
     useEffect(() => {
         fillPokemonList();
-    }, []);
+    }, [page]);
 
     if (loading) {
         return <div>Carregando Pokémons...</div>
     }
-
+  
     return (
         <div className={style.pokemonList}>
-            {pokemonList.map((pokemon) => {
-                return <CardPokemons key={pokemon.id}
-                    pokemon={pokemon} />
-            })}
+            {pokeSearch && pokeSearch.name ? (
+                <CardPokemons key={pokeSearch.id} pokemon={pokeSearch} />
+            ) : (
+                pokemonList.map((pokemon) => (
+                    <CardPokemons  key={pokemon.id} pokemon={pokemon} />
+                ))
+            )}
         </div>
     )
 }

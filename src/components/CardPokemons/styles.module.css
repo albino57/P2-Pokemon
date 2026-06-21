@@ -1,15 +1,335 @@
-.card {
-    background-color: #f5f5f5;
-    border-radius: 8px;
-    padding: 16px;
+.pokeCard {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    width: 330px;
+    margin: 2rem auto;
+    padding: 2rem;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    width: 100%;
-    max-width: 200px;
+    font-family: Arial, sans-serif;
+    border-style: groove;
+    border-color: rgba(246, 250, 25, 0.966);
+    text-transform: capitalize;
+    background-blend-mode: overlay; 
+    background-color: rgba(70, 68, 68, 0.856);
+    transition: transform  all 0.3s ease;
+    
+}.pokeCard:hover {
+    transform: translateY(-10px);
+}
+.pokeCard:active {
+    transform: scale(.96);
+}
+
+.bodyCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 10px 10px 0px;
+    flex: 1;
+    width: 200px;
 }
 
 .pokeImage {
-    width: 120px;
-    height: 120px;
-    object-fit: contain;
+    width: 200px;
+    height: 200px;
+    filter: drop-shadow(0px 5px 5px rgba(0,0,0,0.1));
+   
+}
+
+.topCard {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pokeName {
+    text-transform: capitalize;
+    font-size: 20px;
+    color: white;
+}
+.idPoke{
+    display: contents;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    font-size: 20px;
+    color: rgb(255, 230, 0);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.bottomCard {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.typesCard {
+    display: flex;
+    gap: 20px;
+    border-radius: 8px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 15px;
+    margin-right: 8px;
+    margin-top: 5px;
+    width: max-content;
+}
+
+.typeText {
+    text-transform: capitalize;
+}
+
+.grass {
+    background-color: #0aa743;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 15px;
+    width: 70px;
+    height: 40px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.fire {
+    background-color: #ff4800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+     border-radius: 15px;
+    width: 70px;
+    height: 40px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.water {
+    background-color: #1e75dfcb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+     border-radius: 15px;
+   width: 70px;
+    height: 40px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.bug {
+    background-color: #6b9429cb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+     border-radius: 15px;
+     width: 70px;
+    height: 40px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.normal {
+    background-color: #525151;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   border-radius: 15px;
+    width: 70px;
+    height: 40px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.poison {
+    background-color: #921414c0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+     border-radius: 15px;
+   width: 70px;
+    height: 40px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.electric {
+    background-color: #facc15;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+     border-radius: 15px;
+    width: 70px;
+    height: 40px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.ground {
+    background-color: #643b1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+     border-radius: 15px;
+     width: 70px;
+    height: 40px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.fairy {
+    background-color: #f472b6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+     border-radius: 15px;
+     width: 70px;
+    height: 40px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.flying{
+    background-color: #2d69c4a8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   border-radius: 15px;
+     width: 70px;
+    height: 40px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.psychic{
+    background-color: #843597a8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   border-radius: 15px;
+     width: 70px;
+    height: 40px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.fighting{
+   background-color: #ff1100e1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   border-radius: 15px;
+     width: 70px;
+    height: 40px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.ghost{
+     background-color: #777676c0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   border-radius: 15px;
+     width: 70px;
+    height: 40px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.ice{
+    background-color: #1ea8dfcb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+     border-radius: 15px;
+    width: 70px;
+    height: 40px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.dragon{
+    background-color: #31a779a8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   border-radius: 15px;
+     width: 70px;
+    height: 40px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.rock{
+    background-color: #888787e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   border-radius: 15px;
+     width: 70px;
+    height: 40px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.dark{
+      background-color: #5605c0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   border-radius: 15px;
+     width: 70px;
+    height: 40px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.steel{
+  background-color: #302e30dc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   border-radius: 15px;
+    width: 70px;
+    height: 40px;
+   box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.captureBttn{
+  background: #ffd900fb;
+  font-family: inherit;
+  padding: 0.6em 1.3em;
+  width: 150px;
+  font-weight: 900;
+  font-size: 18px;
+  border: 3px solid black;
+  border-radius: 5em;
+  box-shadow: 0.1em 0.1em;
+  cursor: pointer;
+}.captureBttn:hover{
+    transform: translate(-0.05em, -0.05em);
+  box-shadow: 0.15em 0.15em;
+}.captureBttn:active {
+  transform: translate(0.05em, 0.05em);
+  box-shadow: 0.05em 0.05em;
+}
+
+.captureBttnStatus{
+  background: #ffd900fb;
+  font-family: inherit;
+  padding: 0.6em 1.3em;
+  width: 150px;
+  font-weight: 700;
+  font-size: 18px;
+  border: 3px solid black;
+  border-radius: 5em;
+  box-shadow: 0.1em 0.1em;
+  cursor: pointer;
+}.captureBttnStatus:hover{
+    transform: translate(-0.05em, -0.05em);
+  box-shadow: 0.15em 0.15em;
+}.captureBttnStatus:active {
+  transform: translate(0.05em, 0.05em);
+  box-shadow: 0.05em 0.05em;
 }
