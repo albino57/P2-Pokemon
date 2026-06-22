@@ -4,6 +4,15 @@ Projeto final da disciplina de React da Residência TIC/Software do Serratec.
 
 Aplicação web desenvolvida em React com integração à API de Pokémon, permitindo consultar e visualizar informações dos Pokémons de forma dinâmica e interativa.
 
+## Integrantes
+- Breno França
+- Bruno Freitas
+- Bruno Vitor
+- Marcos Paulo
+- Mário José
+- Paulo César
+- Rafael Albino
+
 ## 🚀 Tecnologias utilizadas
 
 - React
