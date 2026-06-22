@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; 
 import style from './styles.module.css';
+import { ButtonLogin } from '../../components/ButtonLogin';
 
 export const Login = () => {
     //Captura os inputs do formulário
@@ -70,11 +71,7 @@ export const Login = () => {
                         placeholder="Digite sua senha"
                     />
 
-                    <div className={style.buttonContainer}>
-                        <button type="submit" className={style.button}>
-                            Login
-                        </button>
-                    </div>
+                  <ButtonLogin/>
 
                 </form>
             </div>

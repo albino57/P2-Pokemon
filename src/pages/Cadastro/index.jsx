@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styles from './Cadastro.module.css';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate,Link} from 'react-router-dom';
+import { ButtonCadastrar } from '../../components/ButtonCadastrar';
 
 export default function Cadastro({ onAlternarTela }) {
     const [nome, setNome] = useState('');
@@ -99,14 +100,12 @@ export default function Cadastro({ onAlternarTela }) {
                         />
                     </div>
 
-                    <button type="submit" className={styles.btnCadastrar}>Cadastrar</button>
+                   <ButtonCadastrar/>
                 </form>
 
                 <p className={styles.textoAlternar}>
                     Já tem uma conta?{' '}
-                    <span onClick={() => onAlternarTela('login')} className={styles.link}>
-                        Faça Login
-                    </span>
+                    <Link className={styles.link} to="/login">Faça Login</Link>
                 </p>
             </div>
         </div>

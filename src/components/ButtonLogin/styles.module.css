@@ -1,0 +1,21 @@
+.buttonContainer{
+    display: flex;
+    justify-content: right;
+    margin-top: 10px;
+    margin-left: 200px;
+
+}
+
+.button{
+    width: 150px;
+    height: 50px;
+    border-radius: 25px;
+    color: rgb(255, 255, 255);
+    background-color: crimson;
+    font-size: 25px;
+    font-style: oblique;
+    font-weight: bold;
+    font-family: sans-serif;
+    border-color: rgb(0, 0, 0);
+    border-width: 3px;
+}
