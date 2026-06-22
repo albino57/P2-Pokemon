@@ -3,6 +3,7 @@ import { Outlet, Link } from "react-router-dom";
 import style from './styles.module.css';
 import { BannerLayout } from "../components/BannerLayout";
 import { NavBar } from "../components/NavBar";
+import { FooterLayout } from "../components/FooterLayout";
 
 export const DefaultLayout = () => {
   return (
@@ -19,14 +20,7 @@ export const DefaultLayout = () => {
         </main>
       </div>
 
-      <footer>
-        <p>Pokemon © 2026 - Projeto Serratec</p>
-        <Link to="/contato" className="footerLink">
-          <button className={style.contato}>
-          Contato
-          </button>
-        </Link>
-      </footer>
+      <FooterLayout/>
     </div>
   );
 };

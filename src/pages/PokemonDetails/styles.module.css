@@ -119,22 +119,6 @@
     background-color: darkorange;
 }
 
-.voltarButtonContainer {
-
-    margin-top: 40px;
-    margin-bottom: -30px;
-    margin-right: 500px;
-}
-.voltarButton{
-     padding: 8px 12px;
-    cursor: pointer;
-    border-radius: 20px;
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
-    background-color: crimson;
-}
-
 .captureBttn{
   background: #ffd900fb;
   font-family: inherit;

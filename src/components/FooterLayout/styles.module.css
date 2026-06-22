@@ -1,0 +1,33 @@
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    background: darkorange;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+    color: white;
+    height: 3rem;
+    width: 100%;
+    cursor: pointer;
+}
+
+.footerLink {
+    color: white;
+    text-decoration: none;
+}
+
+.contato{
+    width: 68px;
+    color: white;
+    background-color: rgb(167, 166, 163);
+    border-radius: 5px;
+    font-weight: bold;
+    font-style: oblique;
+    height: 35px;
+    cursor: pointer;
+}
+
+.contato:hover {
+    transform: translateY(-2px);
+}

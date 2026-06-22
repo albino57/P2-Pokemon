@@ -5,6 +5,7 @@ import { getPokemon3D } from "../../services/PokeAPI3D/api";
 import style from './styles.module.css'
 import "@google/model-viewer";
 import { PokedexContext } from "../../contexts/PokedexContext";
+import { BackButton } from "../../components/BackButton";
 
 export const PokemonDetails = () => {
 
@@ -115,19 +116,13 @@ export const PokemonDetails = () => {
 
     return (
         <div className={style.cardStatusPokemonContainer} >
-
+            
+           
 
             <div className={style.pokemonCard}>
-
-                <div className={style.voltarButtonContainer}>
-                    <button className={style.voltarButton} onClick={() => navigate(-1)}>
-                       🠸 Voltar
-                    </button>
-                </div>
-
+            
+               <BackButton/>
                 <div className={style.modelContainer}>
-
-
 
                     <div className={style.namePokemon}>
                         {pokemon.name}

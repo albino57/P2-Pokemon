@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; 
 import style from './styles.module.css';
 import { ButtonLogin } from '../../components/ButtonLogin';
+import { BackButton } from '../../components/BackButton';
 
 export const Login = () => {
     //Captura os inputs do formulário
@@ -42,12 +43,8 @@ export const Login = () => {
 
     return (
         <div className={style.background}>
+               <BackButton/>
             <div className={style.loginContainer}>
-                <div className={style.voltarButtonContainer}>
-                    <button className={style.voltarButton} onClick={() => navigate('/home')}>
-                       🠸 Voltar
-                    </button>
-            </div>
                 <img className={style.pokedexLogo} src="src\assets\logoPoke.png" alt="pokedex" />
                 
                 {/* Transformamos para aceitar o envio quando apertar Enter */}
