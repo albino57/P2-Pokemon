@@ -30,13 +30,13 @@
     z-index: 99;
 }
 .entrar{
-    width: 70px;
+    width: 100px;
     color: white;
     background-color: crimson;
     border-radius: 5px;
     font-weight: bold;
     font-style: oblique;
-    height: 25px;
+    height: 32px;
     cursor: pointer;
 }
 

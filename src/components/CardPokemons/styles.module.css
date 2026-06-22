@@ -16,6 +16,7 @@
     background-color: rgba(70, 68, 68, 0.856);
     transition: transform  all 0.3s ease;
     
+    
 }.pokeCard:hover {
     transform: translateY(-10px);
 }
