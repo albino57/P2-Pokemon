@@ -73,13 +73,14 @@
     text-align: center;
     margin-top: 15px;
     font-size: 14px;
-    color: #666;
+    color: #ffffff;
 }
 
 .link {
-    color: #1e88e5;
+    color: #0011ff;
     cursor: pointer;
     font-weight: bold;
+    font-size:15px
 }
 
 .link:hover {
