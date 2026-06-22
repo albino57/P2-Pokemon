@@ -5,6 +5,8 @@ import { getPokemon3D } from "../../services/PokeAPI3D/api";
 import style from './styles.module.css'
 import "@google/model-viewer";
 import { PokedexContext } from "../../contexts/PokedexContext";
+import { BackButton } from "../../components/BackButton";
+import { Card3D } from "../../components/Card3D";
 
 export const PokemonDetails = () => {
 
@@ -94,9 +96,9 @@ export const PokemonDetails = () => {
                 form.formName === selectedForm
         );
 
-        
 
-        function handleCapturar() {
+
+    function handleCapturar() {
         setStatus('capturando');
 
         setTimeout(() => {
@@ -107,65 +109,32 @@ export const PokemonDetails = () => {
         setTimeout(() => {
             setStatus('idle');
         }, 3000);
-        }          
-    
-        function handleSoltar() {
-            dropPokemon(pokemon.id);
-        }
+    }
+
+    function handleSoltar() {
+        dropPokemon(pokemon.id);
+    }
 
     return (
-        <div className={style.cardStatusPokemonContainer} >
-
+       <div className={style.cardStatusPokemonContainer} >
 
             <div className={style.pokemonCard}>
-
-                <div className={style.voltarButtonContainer}>
-                    <button className={style.voltarButton} onClick={() => navigate(-1)}>
-                       🠸 Voltar
-                    </button>
-                </div>
-
-                <div className={style.modelContainer}>
-
-
-
-                    <div className={style.namePokemon}>
-                        {pokemon.name}
-                    </div>
-                    {currentModel && (
-                        <model-viewer
-                            src={currentModel.model}
-                            camera-controls
-                            auto-rotate
-                            shadow-intensity="1"
-                            exposure="1"
-                            style={{
-                                width: "700px",
-                                height: "500px"
-                            }}
-                        />
-                    )}
-
-                    <div className={style.formsContainer}>
-                        {pokemon3D?.forms?.map((form) => (
-                            <button className={style.formsButton}
-                                key={form.formName}
-                                onClick={() =>
-                                    setSelectedForm(form.formName)
-                                }
-                            >
-                                {form.formName}
-                            </button>
-                        ))}
-                    </div>
-                </div>
+                <BackButton />
+                <Card3D
+                    pokemon={pokemon}
+                    currentModel={currentModel}
+                    pokemon3D={pokemon3D}
+                    setSelectedForm={setSelectedForm}
+                />
             </div>
 
+           
             <div className={style.typesStatus}>
-
+                
                 <p className={style.idPokemon}>
                     ID: #{pokemon.id}
                 </p>
+                
                 <h3 className={style.txtTypes}>Tipos:</h3>
                 <div className={style.types}>
                     {pokemon.types.map((info) => (
@@ -174,6 +143,7 @@ export const PokemonDetails = () => {
                         </div>
                     ))}
                 </div>
+                
                 <div className={style.stats}>
                     <h3 className={style.statsTitulo}>Status Pokemon:</h3>
                     <div className={style.typeNameContainer}>
@@ -184,17 +154,24 @@ export const PokemonDetails = () => {
                         ))}
                     </div>
                 </div>
-                <div>
+                
+                <div style={{ marginTop: '20px' }}>
                     {status == 'idle' && (
-                        <button className = {style.captureBttn} onClick={(e) =>{e.stopPropagation();
-                            isCaptured ? handleSoltar() : handleCapturar()}}>
+                        <button className={style.captureBttn} onClick={(e) => {
+                            e.stopPropagation();
+                            isCaptured ? handleSoltar() : handleCapturar()
+                        }}>
                             {isCaptured ? "Soltar" : "Capturar"}
                         </button>
-                        )}
+                    )}
                     {status === 'capturando' && <div className={style.captureBttnStatus}>Capturando...</div>}
                     {status === 'capturado' && <div className={style.captureBttnStatus}>Capturado!</div>}
                 </div>
-            </div>
+
+            </div> 
+
         </div>
+      
+
     )
 }

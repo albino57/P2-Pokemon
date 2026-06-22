@@ -2,18 +2,8 @@ import { useContext, useState } from "react";
 import { PokedexContext } from "../../contexts/PokedexContext";
 import style from './styles.module.css'
 import { useNavigate } from "react-router";
+import { TypeBackground } from "../TypeBackground";
 
-    const typeBackground = {
-    normal: 'src/assets/carstype/normal.png', fire: 'src/assets/carstype/fire.png',
-    water: 'src/assets/carstype/water.png',electric: 'src/assets/carstype/eletric.png',
-    grass: 'src/assets/carstype/grass.png', ice: 'src/assets/carstype/ice.png',
-    fighting: 'src/assets/carstype/fighting.png', poison: 'src/assets/carstype/poison.png',
-    ground: 'src/assets/carstype/ground.png', flying: 'src/assets/carstype/flying.png',
-    psychic: 'src/assets/carstype/pysich.png',bug: 'src/assets/carstype/bug.png',
-    rock: 'src/assets/carstype/rock.png', ghost: 'src/assets/carstype/ghost.png',
-    dragon: 'src/assets/carstype/dragon.png',dark: 'src/assets/carstype/dark.png',
-    steel: 'src/assets/carstype/steel.png', fairy: 'src/assets/carstype/fairy.png',
-};
 
 export const CardPokemons = ({ pokemon }) => {
     const { pokedex, addPokemon, dropPokemon } = useContext(PokedexContext);
@@ -25,7 +15,7 @@ export const CardPokemons = ({ pokemon }) => {
     const [status, setStatus] = useState('idle');
   
     const mainType = pokemon.types && pokemon.types.length > 0 ? pokemon.types[0].type.name : 'normal';
-    const backgroundImage = typeBackground[mainType] || typeBackground['normal'];
+    const backgroundImage = TypeBackground[mainType] || TypeBackground['normal'];
 
     function handleCapturar() {
         setStatus('capturando');

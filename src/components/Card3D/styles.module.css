@@ -1,0 +1,41 @@
+.modelContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 500px; 
+    height: 600px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border: 8px solid rgba(255, 255, 255, 0.034);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border-style: groove;
+    border-color: rgba(255, 217, 0, 0.705);
+}
+.namePokemon {
+    font-size: 50px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.formsContainer {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.formsButton {
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    background-color: darkorange;
+}
+
+

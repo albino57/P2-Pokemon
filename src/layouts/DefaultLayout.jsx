@@ -1,41 +1,17 @@
 import { useState, useEffect, useContext } from "react";
 import { Outlet, Link } from "react-router-dom";
 import style from './styles.module.css';
-import { Searchbar } from "../components/Searchbar";
+import { BannerLayout } from "../components/BannerLayout";
+import { NavBar } from "../components/NavBar";
+import { FooterLayout } from "../components/FooterLayout";
 
 export const DefaultLayout = () => {
   return (
     <div className={style.layoutContainer}>
-      <nav className={style.carousel}>
-        <img className={style.navLogo} src="src/assets/logoPokemon.png" alt="pokedex" />
-
-        <div className={style.entrarContainer}>
-          <Link className={style.linkNav} to="/login">
-            <button className={style.entrar}>
-              Entrar
-            </button>
-          </Link>
-
-          <p>|</p>
-          
-          <Link className={style.linkCad} to="/cadastro">
-            <button className={style.cadastrar}>
-            Cadastre-se
-            </button>
-          </Link>
-        </div>
-      </nav>
-
-      <nav className={style.subNav}>
-        <div className={style.linkNavContainer}>
-          <Link className={style.linkNav} to="/home">Home</Link>
-          <Link className={style.linkNav} to="/pokemon">Pokémons</Link>
-          <Link className={style.linkNav} to="/pokedex">Pokédex</Link>
-          <Link className={style.linkNav} to="/creator">New Pokémons</Link>
-          <Searchbar />
-        </div>
-      </nav>
-
+     
+      <BannerLayout/>
+      <NavBar/>
+      
       <div className={style.mainContainer}>
         <main className={style.main}>
           <div className={style.divOutlet}>
@@ -44,14 +20,7 @@ export const DefaultLayout = () => {
         </main>
       </div>
 
-      <footer>
-        <p>Pokemon © 2026 - Projeto Serratec</p>
-        <Link to="/contato" className="footerLink">
-          <button className={style.contato}>
-          Contato
-          </button>
-        </Link>
-      </footer>
+      <FooterLayout/>
     </div>
   );
 };

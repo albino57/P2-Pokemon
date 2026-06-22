@@ -2,6 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 50px;
     height: 100vh;
     background-image: url(src/assets/background-login.jpg);
     background-repeat: no-repeat;
@@ -19,8 +21,8 @@
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    width: 500px;
-    height: 550px;
+    width: 600px;
+    height: 600px;
     padding: 20px;
      background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(4px);
@@ -32,7 +34,7 @@
 .inputContainer{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
     width: 100%;
     align-items: center;
     
@@ -40,53 +42,23 @@
 
 .label{
     font-size: 25px;
-    align-self: flex-start;
-    margin-left: 35px;
     font-weight: bolder;
     font-family: sans-serif;
      font-style: oblique;
+     flex-direction: column;
+      margin-top: 25px;
+      margin-right: 300px;
 }
+
 
 .input{
     width: 400px;
     height: 40px;
     padding: 10px;
     border-radius: 10px;
+    margin-top: -20px;
     background-color: rgba(70, 68, 68, 0.493);
     color: white;
- 
-   
-}
-.buttonContainer{
-    display: flex;
-    justify-content: right;
-    margin-top: 10px;
-    margin-left: 200px;
-
 }
 
-.button{
-    width: 150px;
-    height: 50px;
-    border-radius: 25px;
-    color: rgb(255, 255, 255);
-    background-color: crimson;
-    font-size: 25px;
-    font-style: oblique;
-    font-weight: bold;
-    font-family: sans-serif;
-    border-color: rgb(0, 0, 0);
-    border-width: 3px;
-}
 
-.voltarButtonContainer {
-    align-self: flex-start;
-    margin-bottom: 10px;
-}
-.voltarButton {
-    padding: 8px 12px;
-    cursor: pointer;
-    border-radius: 20px;
-    font-size: 16px;
-    font-weight: bold;
-}

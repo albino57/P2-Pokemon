@@ -1,18 +1,28 @@
 .container {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     height: 100vh;
-    background-color: #f4f4f4;
+    gap:50px;
+    background-image: url(src/assets/background-login.jpg);
+      background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center;
 }
 
 .card {
-    background: white;
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 400px;
+    max-width: 600px;
+     background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
 .card h2 {
@@ -28,15 +38,20 @@
 .inputGroup label {
     display: block;
     margin-bottom: 5px;
-    color: #666;
+    color: #1d1c1c;
+    font-weight: bold;
+    font-style: oblique;
+
 }
 
 .inputGroup input {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: rgba(70, 68, 68, 0.493);
+    color: white;
+    border-style: none;
 }
 
 .btnCadastrar {
@@ -71,13 +86,3 @@
     text-decoration: underline;
 }
 
-.voltarButtonContainer {
-    margin-bottom: 10px;
-}
-.voltarButton {
-    padding: 8px 12px;
-    cursor: pointer;
-    border-radius: 20px;
-    font-size: 16px;
-    font-weight: bold;
-}
